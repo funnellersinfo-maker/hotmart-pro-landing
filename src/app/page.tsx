@@ -342,7 +342,7 @@ function MotorSection() {
       icon: <BookOpen className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
       title: 'Tienda de Infoproductos Pro',
-      desc: 'Crea p&aacute;ginas de ventas de alta conversi&oacute;n integradas directamente con Hotmart. Tu tienda digital lista para facturar desde d&iacute;a uno.',
+      desc: 'Crea tu tienda de infoproductos integrada directamente con Hotmart. Tu ecosistema digital listo para facturar desde d&iacute;a uno.',
       tags: ['HOTMART INTEGRADO', 'P&Aacute;GINA DE VENTAS'],
       tagColor: 'text-[#00B94C]',
     },
@@ -351,7 +351,7 @@ function MotorSection() {
       icon: <Library className="w-7 h-7 text-[#FFD700]" />,
       iconBg: 'bg-[#FFD700]/10',
       title: 'Cat&aacute;logo Digital',
-      desc: 'Organiza y presenta tus productos digitales de forma profesional. Control total sobre tu inventario digital.',
+      desc: 'Organiza y presenta tus productos digitales de forma profesional. Control total sobre tu cat&aacute;logo.',
       progress: true,
     },
     {
@@ -367,7 +367,7 @@ function MotorSection() {
       icon: <Zap className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
       title: 'Cerebro de IA',
-      desc: 'Inteligencia artificial que cierra ventas por ti. Responde dudas, cualifica leads y convierte visitantes en compradores autom&aacute;ticamente.',
+      desc: 'Inteligencia artificial que cierra ventas por ti. Responde dudas, cualifica prospectos y convierte visitantes en compradores autom&aacute;ticamente.',
       chatMockup: true,
     },
   ]
@@ -447,7 +447,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            Hola, quiero el curso de marketing digital. &iquest;Tiene garant&iacute;a?
+                            Hola, quiero crear mi primer infoproducto. &iquest;La mentor&iacute;a tiene garant&iacute;a?
                           </p>
                         </div>
                       </div>
@@ -458,7 +458,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            &iexcl;Hola! &iexcl;S&iacute;! El curso tiene 30 d&iacute;as de garant&iacute;a total. +1,800 alumnos ya lo validan. &iquest;Te lo activo ahora?
+                            &iexcl;Hola! &iexcl;S&iacute;! La mentor&iacute;a tiene 30 d&iacute;as de garant&iacute;a total. +1,800 alumnos ya lo validan. &iquest;Te activo el acceso ahora?
                           </p>
                           <span className="text-[#00B94C]/60 text-[10px] mt-1 block">Respondido en 2s &middot; IA Activa</span>
                         </div>
@@ -492,7 +492,7 @@ function StatsSection() {
   const stats = [
     { value: '$300B+', label: 'Mercado Global', color: 'text-[#FF6B35]', iconBg: 'bg-[#FF6B35]/10' },
     { value: '73%', label: 'Crecimiento Anual', color: 'text-[#00B94C]', iconBg: 'bg-[#00B94C]/10' },
-    { value: '0h', label: 'Logística Requerida', color: 'text-[#F7C948]', iconBg: 'bg-[#F7C948]/10' },
+    { value: '0%', label: 'Log&iacute;stica Necesaria', color: 'text-[#F7C948]', iconBg: 'bg-[#F7C948]/10' },
     { value: '100%', label: 'Margen de Ganancia', color: 'text-[#9B59B6]', iconBg: 'bg-[#9B59B6]/10' },
   ]
 
@@ -500,7 +500,7 @@ function StatsSection() {
     {
       icon: <Clock className="w-6 h-6 text-[#FF6B35]" />,
       title: 'Vende Mientras Duermes',
-      desc: 'Tus productos se venden 24/7 en piloto autom&aacute;tico. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
+      desc: 'Tus infoproductos se venden 24/7 en piloto autom&aacute;tico. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
     },
     {
       icon: <Globe className="w-6 h-6 text-[#00B94C]" />,
@@ -599,36 +599,92 @@ function AutomatedSystemSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {/* Funnel diagram */}
             <div className="scroll-reveal">
-              <GlassCard className="rounded-[32px] p-6 md:p-8 h-full">
+              <GlassCard className="rounded-[32px] p-6 md:p-8 h-full flex flex-col">
                 <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
                   <Target className="w-5 h-5 text-[#00B94C]" />
-                  Embudo de Conversión
+                  Embudo de Conversi&oacute;n
                 </h3>
-                <div className="space-y-3">
-                  {[
-                    { label: 'Tráfico Orgánico + Pago', pct: 100, color: 'bg-purple-500' },
-                    { label: 'Página de Ventas', pct: 75, color: 'bg-[#00B94C]' },
-                    { label: 'Checkout Hotmart', pct: 50, color: 'bg-[#00B94C]/80' },
-                    { label: 'Entrega Automática', pct: 35, color: 'bg-[#FFD700]' },
-                    { label: 'GANANCIAS $$$', pct: 25, color: 'bg-gradient-to-r from-[#00B94C] to-[#2DCE89]' },
-                  ].map((step, i) => (
-                    <div key={i} className="space-y-1.5">
-                      <div className="flex justify-between text-xs">
-                        <span className="text-gray-400 font-medium">{step.label}</span>
-                        <span className="text-gray-500">{step.pct}%</span>
+                <div className="flex-1 flex flex-col items-center justify-center gap-2">
+                  {/* Stage 1: Tráfico - widest */}
+                  <div className="w-full max-w-full">
+                    <div className="bg-purple-500/20 border border-purple-500/30 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-purple-500/30">
+                      <div className="w-8 h-8 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
+                        <span className="text-sm">📱</span>
                       </div>
-                      <div className="h-8 bg-white/5 rounded-lg overflow-hidden">
-                        <div
-                          className={`h-full rounded-lg ${step.color} flex items-center justify-end pr-3 transition-all duration-1000`}
-                          style={{ width: `${step.pct}%`, transitionDelay: `${i * 150}ms` }}
-                        >
-                          {i === 4 && (
-                            <span className="text-white text-xs font-bold">$$$</span>
-                          )}
-                        </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-white font-bold text-xs sm:text-sm">Tr&aacute;fico Org&aacute;nico + Pago</span>
                       </div>
+                      <span className="text-purple-400 text-[10px] sm:text-xs font-bold shrink-0">META ADS &middot; TIKTOK</span>
                     </div>
-                  ))}
+                  </div>
+                  {/* Arrow */}
+                  <div className="flex flex-col items-center -my-1">
+                    <div className="w-px h-2 bg-gradient-to-b from-purple-500/40 to-[#00B94C]/40" />
+                    <ChevronDown className="w-3 h-3 text-[#00B94C]/50" />
+                  </div>
+                  {/* Stage 2: Landing Page */}
+                  <div className="w-[88%]">
+                    <div className="bg-[#00B94C]/15 border border-[#00B94C]/25 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/25">
+                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
+                        <span className="text-sm">🎯</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-white font-bold text-xs sm:text-sm">P&aacute;gina de Ventas</span>
+                      </div>
+                      <span className="text-[#00B94C]/60 text-[10px] sm:text-xs font-bold shrink-0">DOPAM&Iacute;NICA</span>
+                    </div>
+                  </div>
+                  {/* Arrow */}
+                  <div className="flex flex-col items-center -my-1">
+                    <div className="w-px h-2 bg-gradient-to-b from-[#00B94C]/40 to-[#00B94C]/30" />
+                    <ChevronDown className="w-3 h-3 text-[#00B94C]/40" />
+                  </div>
+                  {/* Stage 3: Checkout */}
+                  <div className="w-[74%]">
+                    <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/20">
+                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/15 flex items-center justify-center shrink-0">
+                        <span className="text-sm">💳</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-white font-bold text-xs sm:text-sm">Checkout Hotmart</span>
+                      </div>
+                      <span className="text-[#00B94C]/50 text-[10px] sm:text-xs font-bold shrink-0">AUTOM&Aacute;TICO</span>
+                    </div>
+                  </div>
+                  {/* Arrow */}
+                  <div className="flex flex-col items-center -my-1">
+                    <div className="w-px h-2 bg-gradient-to-b from-[#00B94C]/30 to-[#FFD700]/40" />
+                    <ChevronDown className="w-3 h-3 text-[#FFD700]/50" />
+                  </div>
+                  {/* Stage 4: Delivery */}
+                  <div className="w-[60%]">
+                    <div className="bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#FFD700]/20">
+                      <div className="w-8 h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center shrink-0">
+                        <span className="text-sm">📦</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-white font-bold text-xs sm:text-sm">Entrega Autom&aacute;tica</span>
+                      </div>
+                      <span className="text-[#FFD700]/60 text-[10px] sm:text-xs font-bold shrink-0">INSTANT&Aacute;NEO</span>
+                    </div>
+                  </div>
+                  {/* Arrow */}
+                  <div className="flex flex-col items-center -my-1">
+                    <div className="w-px h-2 bg-gradient-to-b from-[#FFD700]/40 to-[#2DCE89]/50" />
+                    <ChevronDown className="w-3 h-3 text-[#2DCE89]/60" />
+                  </div>
+                  {/* Stage 5: Ganancias - narrowest, highlighted */}
+                  <div className="w-[48%]">
+                    <div className="bg-gradient-to-r from-[#00B94C]/20 to-[#2DCE89]/20 border border-[#00B94C]/30 rounded-xl px-4 py-3 flex items-center gap-3 w-full animate-pulse-border transition-all duration-500 hover:from-[#00B94C]/30 hover:to-[#2DCE89]/30">
+                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
+                        <span className="text-sm">💰</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[#00B94C] font-bold text-xs sm:text-sm">GANANCIAS</span>
+                      </div>
+                      <span className="text-[#00B94C] text-[10px] sm:text-xs font-bold shrink-0">$$$</span>
+                    </div>
+                  </div>
                 </div>
               </GlassCard>
             </div>
@@ -731,11 +787,16 @@ function AutomatedSystemSection() {
 
 function PricingSection() {
   const features = [
-    'Creación de tu infoproducto desde cero',
-    'Dominio de publicidad pagada (Meta Ads, TikTok Ads)',
-    'Viralización de contenido orgánico',
+    'Setup de ecosistema y branding',
+    'Selecci&oacute;n de productos ganadores',
+    'Dise&ntilde;o de buyer y avatares',
+    'Creaci&oacute;n de infoproductos desde cero',
+    'Dominio de publicidad pagada',
+    'Viralizaci&oacute;n de contenido org&aacute;nico',
+    'Landing pages dopam&iacute;nicas',
+    'F&oacute;rmula de lanzamiento 2026',
     '2 sesiones uno a uno personalizadas',
-    'Acompañamiento durante 30 días',
+    'Acompa&ntilde;amiento durante 30 d&iacute;as',
     'Grupo VIP de soporte exclusivo',
   ]
 
@@ -988,7 +1049,7 @@ function FinalCTASection() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-3 sm:mb-4 relative z-10 leading-tight">
-              &iquest;LISTA PARA{' '}
+              &iquest;LISTO PARA{' '}
               <span className="text-gradient-hotmart">FACTURAR</span>{' '}
               MIENTRAS DUERMES?
             </h2>
