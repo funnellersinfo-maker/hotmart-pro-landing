@@ -606,159 +606,92 @@ function AutomatedSystemSection() {
                 </h3>
                 <div className="flex-1 flex flex-col items-center justify-center gap-2">
                   {/* Stage 1: Tráfico - widest */}
-                  <div className="w-full max-w-full">
-                    <div className="bg-purple-500/20 border border-purple-500/30 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-purple-500/30">
-                      <div className="w-8 h-8 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
-                        <span className="text-sm">📱</span>
+                  <div className="w-full">
+                    <div className="bg-purple-500/20 border border-purple-500/30 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full transition-all duration-500 hover:bg-purple-500/30">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
+                        <span className="text-xs sm:text-sm">📱</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Tráfico Orgánico + Pago</span>
+                        <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Tráfico Orgánico + Pago</span>
                       </div>
-                      <span className="text-purple-400 text-[10px] sm:text-xs font-bold shrink-0">META ADS · TIKTOK</span>
+                      <span className="text-purple-400 text-[9px] sm:text-xs font-bold shrink-0 hidden xs:inline">META ADS · TIKTOK</span>
                     </div>
                   </div>
                   {/* Arrow */}
-                  <div className="flex flex-col items-center -my-1">
+                  <div className="flex flex-col items-center -my-0.5">
                     <div className="w-px h-2 bg-gradient-to-b from-purple-500/40 to-[#00B94C]/40" />
                     <ChevronDown className="w-3 h-3 text-[#00B94C]/50" />
                   </div>
                   {/* Stage 2: Landing Page */}
-                  <div className="w-[88%]">
-                    <div className="bg-[#00B94C]/15 border border-[#00B94C]/25 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/25">
-                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
-                        <span className="text-sm">🎯</span>
+                  <div className="w-full sm:w-[88%]">
+                    <div className="bg-[#00B94C]/15 border border-[#00B94C]/25 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/25">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
+                        <span className="text-xs sm:text-sm">🎯</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Página de Ventas</span>
+                        <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Página de Ventas</span>
                       </div>
-                      <span className="text-[#00B94C]/60 text-[10px] sm:text-xs font-bold shrink-0">DOPAMÍNICA</span>
+                      <span className="text-[#00B94C]/60 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">DOPAMÍNICA</span>
                     </div>
                   </div>
                   {/* Arrow */}
-                  <div className="flex flex-col items-center -my-1">
+                  <div className="flex flex-col items-center -my-0.5">
                     <div className="w-px h-2 bg-gradient-to-b from-[#00B94C]/40 to-[#00B94C]/30" />
                     <ChevronDown className="w-3 h-3 text-[#00B94C]/40" />
                   </div>
                   {/* Stage 3: Checkout */}
-                  <div className="w-[74%]">
-                    <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/20">
-                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/15 flex items-center justify-center shrink-0">
-                        <span className="text-sm">💳</span>
+                  <div className="w-full sm:w-[74%]">
+                    <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full transition-all duration-500 hover:bg-[#00B94C]/20">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/15 flex items-center justify-center shrink-0">
+                        <span className="text-xs sm:text-sm">💳</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Checkout Hotmart</span>
+                        <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Checkout Hotmart</span>
                       </div>
-                      <span className="text-[#00B94C]/50 text-[10px] sm:text-xs font-bold shrink-0">AUTOMÁTICO</span>
+                      <span className="text-[#00B94C]/50 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">AUTOMÁTICO</span>
                     </div>
                   </div>
                   {/* Arrow */}
-                  <div className="flex flex-col items-center -my-1">
+                  <div className="flex flex-col items-center -my-0.5">
                     <div className="w-px h-2 bg-gradient-to-b from-[#00B94C]/30 to-[#FFD700]/40" />
                     <ChevronDown className="w-3 h-3 text-[#FFD700]/50" />
                   </div>
                   {/* Stage 4: Delivery */}
-                  <div className="w-[60%]">
-                    <div className="bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-xl px-4 py-3 flex items-center gap-3 w-full transition-all duration-500 hover:bg-[#FFD700]/20">
-                      <div className="w-8 h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center shrink-0">
-                        <span className="text-sm">📦</span>
+                  <div className="w-full sm:w-[60%]">
+                    <div className="bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full transition-all duration-500 hover:bg-[#FFD700]/20">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center shrink-0">
+                        <span className="text-xs sm:text-sm">📦</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Entrega Automática</span>
+                        <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Entrega Automática</span>
                       </div>
-                      <span className="text-[#FFD700]/60 text-[10px] sm:text-xs font-bold shrink-0">INSTANTÁNEO</span>
+                      <span className="text-[#FFD700]/60 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">INSTANTÁNEO</span>
                     </div>
                   </div>
                   {/* Arrow */}
-                  <div className="flex flex-col items-center -my-1">
+                  <div className="flex flex-col items-center -my-0.5">
                     <div className="w-px h-2 bg-gradient-to-b from-[#FFD700]/40 to-[#2DCE89]/50" />
                     <ChevronDown className="w-3 h-3 text-[#2DCE89]/60" />
                   </div>
                   {/* Stage 5: Ganancias - narrowest, highlighted */}
-                  <div className="w-[48%]">
-                    <div className="bg-gradient-to-r from-[#00B94C]/20 to-[#2DCE89]/20 border border-[#00B94C]/30 rounded-xl px-4 py-3 flex items-center gap-3 w-full animate-pulse-border transition-all duration-500 hover:from-[#00B94C]/30 hover:to-[#2DCE89]/30">
-                      <div className="w-8 h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
-                        <span className="text-sm">💰</span>
+                  <div className="w-full sm:w-[48%]">
+                    <div className="bg-gradient-to-r from-[#00B94C]/20 to-[#2DCE89]/20 border border-[#00B94C]/30 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full animate-pulse-border transition-all duration-500 hover:from-[#00B94C]/30 hover:to-[#2DCE89]/30">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
+                        <span className="text-xs sm:text-sm">💰</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-[#00B94C] font-bold text-xs sm:text-sm">GANANCIAS</span>
+                        <span className="text-[#00B94C] font-bold text-[11px] sm:text-sm leading-tight">GANANCIAS</span>
                       </div>
-                      <span className="text-[#00B94C] text-[10px] sm:text-xs font-bold shrink-0">$$$</span>
+                      <span className="text-[#00B94C] text-[9px] sm:text-xs font-bold shrink-0">$$$</span>
                     </div>
                   </div>
                 </div>
               </GlassCard>
             </div>
 
-            {/* AI Chat Agent Mockup */}
+            {/* AI Chat Agent - Interactive */}
             <div className="scroll-reveal">
-              <GlassCard className="rounded-[32px] p-6 md:p-8 h-full">
-                <h3 className="text-white font-bold text-lg mb-2 flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5 text-[#00B94C]" />
-                  Agente de IA
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#00B94C]/20 text-[#00B94C] uppercase tracking-wider">
-                    Live
-                  </span>
-                </h3>
-                <p className="text-gray-600 text-xs mb-4">Asistente inteligente que cierra ventas 24/7</p>
-
-                <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
-                  {/* Conversation */}
-                  <div className="flex gap-2 items-start">
-                    <div className="w-6 h-6 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Zap className="w-3 h-3 text-[#00B94C]" />
-                    </div>
-                    <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
-                      <p className="text-gray-300 text-xs leading-relaxed">
-                        ¡Bienvenido! Soy tu asistente. ¿Buscas crear tu primer infoproducto o escalar los que ya tienes?
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 items-start justify-end">
-                    <div className="bg-white/5 rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%]">
-                      <p className="text-gray-300 text-xs">
-                        Quiero crear uno desde cero, nunca he vendido nada online.
-                      </p>
-                    </div>
-                    <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-3 h-3 text-gray-400" />
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 items-start">
-                    <div className="w-6 h-6 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Zap className="w-3 h-3 text-[#00B94C]" />
-                    </div>
-                    <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
-                      <p className="text-gray-300 text-xs leading-relaxed">
-                        Perfecto. Nuestra mentoría te lleva paso a paso: validación, creación, lanzamiento y tráfico. ¿En qué área eres experto?
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 items-start justify-end">
-                    <div className="bg-white/5 rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%]">
-                      <p className="text-gray-300 text-xs">
-                        Soy nutricionista, tengo muchos conocimientos.
-                      </p>
-                    </div>
-                    <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-3 h-3 text-gray-400" />
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 items-start">
-                    <div className="w-6 h-6 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Zap className="w-3 h-3 text-[#00B94C]" />
-                    </div>
-                    <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
-                      <p className="text-gray-300 text-xs leading-relaxed">
-                        ¡Excelente nicho! Los cursos de nutrición en Hotmart facturan en promedio $2,400/mes. Con nuestra mentoría puedes lanzar en 14 días. ¿Te comparto el plan? 🚀
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </GlassCard>
+              <InteractiveChat />
             </div>
           </div>
 
@@ -780,6 +713,148 @@ function AutomatedSystemSection() {
         </SectionWrapper>
       </div>
     </section>
+  )
+}
+
+function InteractiveChat() {
+  const [messages, setMessages] = useState<{ role: 'user' | 'assistant'; content: string }[]>([
+    { role: 'assistant', content: '¡Hola! 👋 Soy tu asistente de Hotmart Pro. ¿En qué puedo ayudarte hoy?' },
+  ])
+  const [input, setInput] = useState('')
+  const [loading, setLoading] = useState(false)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages])
+
+  const suggestedResponses = [
+    '¿Qué incluye el plan de $350?',
+    '¿Necesito experiencia previa?',
+    '¿Cómo funciona la mentoría?',
+    '¿Tiene garantía?',
+  ]
+
+  async function sendMessage(text: string) {
+    if (!text.trim() || loading) return
+    const userMsg = text.trim()
+    setInput('')
+    setMessages(prev => [...prev, { role: 'user', content: userMsg }])
+    setLoading(true)
+
+    try {
+      const res = await fetch('/api', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMsg }),
+      })
+      const data = await res.json()
+      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }])
+    } catch {
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Error de conexión. Escríbeme por WhatsApp: https://wa.link/hanu3h 📱' }])
+    } finally {
+      setLoading(false)
+      inputRef.current?.focus()
+    }
+  }
+
+  return (
+    <GlassCard className="rounded-[32px] p-4 sm:p-6 md:p-8 h-full flex flex-col">
+      <h3 className="text-white font-bold text-base sm:text-lg mb-1 flex items-center gap-2">
+        <MessageCircle className="w-5 h-5 text-[#00B94C]" />
+        Agente de IA
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#00B94C]/20 text-[#00B94C] uppercase tracking-wider animate-pulse">
+          Live
+        </span>
+      </h3>
+      <p className="text-gray-600 text-[10px] sm:text-xs mb-3 sm:mb-4">Pregúntame lo que quieras sobre la mentoría</p>
+
+      {/* Messages area */}
+      <div className="flex-1 space-y-2.5 min-h-[200px] sm:min-h-[260px] max-h-[320px] sm:max-h-[340px] overflow-y-auto pr-1 mb-3">
+        {messages.map((msg, i) => (
+          <div key={i} className={`flex gap-2 items-start ${msg.role === 'user' ? 'justify-end' : ''}`}>
+            {msg.role === 'assistant' && (
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0 mt-0.5">
+                <Zap className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#00B94C]" />
+              </div>
+            )}
+            <div className={`${msg.role === 'assistant'
+              ? 'bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm'
+              : 'bg-white/5 rounded-2xl rounded-tr-sm'
+            } px-3 py-2 sm:px-4 sm:py-2.5 max-w-[88%]`}>
+              <p className="text-gray-300 text-[11px] sm:text-xs leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+            </div>
+            {msg.role === 'user' && (
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
+                <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-gray-400" />
+              </div>
+            )}
+          </div>
+        ))}
+        {loading && (
+          <div className="flex gap-2 items-start">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0 mt-0.5">
+              <Zap className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#00B94C]" />
+            </div>
+            <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-3 py-2 sm:px-4 sm:py-2.5">
+              <div className="flex gap-1">
+                <span className="w-1.5 h-1.5 bg-[#00B94C]/50 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <span className="w-1.5 h-1.5 bg-[#00B94C]/50 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <span className="w-1.5 h-1.5 bg-[#00B94C]/50 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+              </div>
+            </div>
+          </div>
+        )}
+        <div ref={messagesEndRef} />
+      </div>
+
+      {/* Suggested responses - only show when not loading and few messages */}
+      {messages.length <= 2 && !loading && (
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3">
+          {suggestedResponses.map((s, i) => (
+            <button
+              key={i}
+              onClick={() => sendMessage(s)}
+              className="text-[9px] sm:text-[10px] font-semibold px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-full border border-[#00B94C]/20 text-[#00B94C]/80 bg-[#00B94C]/5 hover:bg-[#00B94C]/15 hover:text-[#00B94C] transition-all duration-200 whitespace-nowrap"
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Input */}
+      <div className="flex gap-2">
+        <input
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && sendMessage(input)}
+          placeholder="Escribe tu pregunta..."
+          disabled={loading}
+          className="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-white text-[11px] sm:text-xs placeholder-gray-600 focus:outline-none focus:border-[#00B94C]/40 transition-colors disabled:opacity-50"
+        />
+        <button
+          onClick={() => sendMessage(input)}
+          disabled={loading || !input.trim()}
+          className="btn-dopamine rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 text-white disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
+        >
+          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+        </button>
+      </div>
+
+      {/* WhatsApp link */}
+      <a
+        href="https://wa.link/hanu3h"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2.5 text-center block text-[9px] sm:text-[10px] text-[#00B94C]/60 hover:text-[#00B94C] transition-colors"
+      >
+        ¿Prefieres WhatsApp? Escribe directamente 👉
+      </a>
+    </GlassCard>
   )
 }
 
