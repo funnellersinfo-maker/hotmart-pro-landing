@@ -167,7 +167,9 @@ function Navigation() {
 
         {/* CTA (desktop) */}
         <a
-          href="#"
+          href="https://wa.link/hanu3h"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:block btn-dopamine rounded-full px-5 py-2 text-xs font-bold shrink-0"
         >
           EMPEZAR AHORA
@@ -197,7 +199,9 @@ function Navigation() {
             </a>
           ))}
           <a
-            href="#"
+            href="https://wa.link/hanu3h"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-dopamine rounded-full px-5 py-2.5 text-xs font-bold text-center mt-1"
           >
             EMPEZAR AHORA
@@ -287,7 +291,9 @@ function HeroSection() {
         {/* CTA Row */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8">
           <a
-            href="#"
+            href="https://wa.link/hanu3h"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-dopamine rounded-full px-8 py-4 text-sm md:text-base inline-flex items-center gap-2"
           >
             ADQUIRIR ACCESO VIP <ArrowRight className="w-4 h-4" />
@@ -803,7 +809,9 @@ function PricingSection() {
 
               {/* CTA */}
               <a
-                href="#"
+                href="https://wa.link/hanu3h"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-dopamine rounded-full px-10 py-4 text-sm md:text-base inline-flex items-center gap-2 relative z-10"
               >
                 ASEGURAR MI CUPO VIP <ArrowRight className="w-4 h-4" />
@@ -989,7 +997,9 @@ function FinalCTASection() {
             </p>
 
             <a
-              href="#"
+              href="https://wa.link/hanu3h"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-dopamine rounded-full px-10 py-5 text-base md:text-lg inline-flex items-center gap-3 mt-8 mb-4 relative z-10"
             >
               ESCR&Iacute;BEME POR WHATSAPP AHORA <ArrowRight className="w-5 h-5" />
@@ -1025,7 +1035,7 @@ function Footer() {
           <div className="flex gap-6">
             <a href="#" className="text-[#FF6B35]/60 hover:text-[#FF6B35] text-xs transition-colors">T&eacute;rminos</a>
             <a href="#" className="text-[#00B94C]/60 hover:text-[#00B94C] text-xs transition-colors">Privacidad</a>
-            <a href="#" className="text-[#9B59B6]/60 hover:text-[#9B59B6] text-xs transition-colors">Contacto</a>
+            <a href="https://wa.link/hanu3h" target="_blank" rel="noopener noreferrer" className="text-[#9B59B6]/60 hover:text-[#9B59B6] text-xs transition-colors">Contacto</a>
           </div>
         </div>
       </div>
