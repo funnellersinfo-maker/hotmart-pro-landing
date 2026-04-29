@@ -269,7 +269,7 @@ function HeroSection() {
         <div className="inline-flex items-center gap-1.5 sm:gap-2 liquid-glass rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-5 sm:mb-8">
           <PulseDot />
           <span className="text-gray-400 text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
-            EST. 2026 &middot; MENTOR&Iacute;A ACTIVA
+            EST. 2026 · MENTORÍA ACTIVA
           </span>
         </div>
 
@@ -284,7 +284,7 @@ function HeroSection() {
 
         {/* Subheadline */}
         <p className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-1">
-          Transforma tu conocimiento en ingresos autom&aacute;ticos. Sin inventario. Sin log&iacute;stica.
+          Transforma tu conocimiento en ingresos automáticos. Sin inventario. Sin logística.
           Solo escalabilidad digital con inteligencia artificial.
         </p>
 
@@ -341,17 +341,17 @@ function MotorSection() {
       span: 'md:col-span-8',
       icon: <BookOpen className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
-      title: 'Validaci&oacute;n de Nicho Rentable',
-      desc: 'Identifica el nicho perfecto con mayor demanda y menor competencia en Hotmart. Te ense&ntilde;amos a validar tu idea antes de invertir un solo d&oacute;lar en creaci&oacute;n.',
-      tags: ['VALIDACI&Oacute;N', 'NICHO GANADOR'],
+      title: 'Validación de Nicho Rentable',
+      desc: 'Identifica el nicho perfecto con mayor demanda y menor competencia en Hotmart. Te enseñamos a validar tu idea antes de invertir un solo dólar en creación.',
+      tags: ['VALIDACIÓN', 'NICHO GANADOR'],
       tagColor: 'text-[#00B94C]',
     },
     {
       span: 'md:col-span-4',
       icon: <Library className="w-7 h-7 text-[#FFD700]" />,
       iconBg: 'bg-[#FFD700]/10',
-      title: 'Creaci&oacute;n de Infoproducto',
-      desc: 'Dise&ntilde;a tu curso, ebook o membres&iacute;a desde cero con estructura profesional. Sin necesidad de ser experto en edici&oacute;n ni dise&ntilde;o.',
+      title: 'Creación de Infoproducto',
+      desc: 'Diseña tu curso, ebook o membresía desde cero con estructura profesional. Sin necesidad de ser experto en edición ni diseño.',
       progress: true,
     },
     {
@@ -359,7 +359,7 @@ function MotorSection() {
       icon: <Download className="w-7 h-7 text-pink-500" />,
       iconBg: 'bg-pink-500/10',
       title: 'Lanzamiento Masivo',
-      desc: 'Domina el lanzamiento evergreen de tu infoproducto. Genera tr&aacute;fico pagado y org&aacute;nico que convierte en ventas 24/7.',
+      desc: 'Domina el lanzamiento evergreen de tu infoproducto. Genera tráfico pagado y orgánico que convierte en ventas 24/7.',
       badges: true,
     },
     {
@@ -367,7 +367,7 @@ function MotorSection() {
       icon: <Zap className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
       title: 'IA como Co-Creador',
-      desc: 'Usa inteligencia artificial para crear contenido, dise&ntilde;ar materiales y escalar tu infoproducto 10x m&aacute;s r&aacute;pido que el promedio.',
+      desc: 'Usa inteligencia artificial para crear contenido, diseñar materiales y escalar tu infoproducto 10x más rápido que el promedio.',
       chatMockup: true,
     },
   ]
@@ -381,7 +381,7 @@ function MotorSection() {
               EL MOTOR DE <span className="text-gradient-hotmart">HOTMART PRO</span>
             </h2>
             <p className="text-gray-500 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
-              Cuatro pilares dise&ntilde;ados para crear, lanzar y escalar infoproductos de forma masiva.
+              Cuatro pilares diseñados para crear, lanzar y escalar infoproductos de forma masiva.
             </p>
           </div>
 
@@ -429,7 +429,7 @@ function MotorSection() {
                   {card.badges && (
                     <div className="flex gap-2 mt-4">
                       <span className="text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
-                        INSTANT&Aacute;NEO
+                        INSTANTÁNEO
                       </span>
                       <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">
                         EVERGREEN
@@ -447,7 +447,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            Hola, quiero crear un infoproducto pero no s&eacute; por d&oacute;nde empezar.
+                            Hola, quiero crear un infoproducto pero no sé por dónde empezar.
                           </p>
                         </div>
                       </div>
@@ -458,9 +458,9 @@ function MotorSection() {
                         </div>
                         <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            &iexcl;Hola! Con nuestra mentor&iacute;a te llevamos paso a paso: validamos tu nicho, creamos el contenido con IA y lanzamos en 14 d&iacute;as. +1,800 alumnos ya lo validan. &iquest;Te activo el acceso?
+                            ¡Hola! Con nuestra mentoría te llevamos paso a paso: validamos tu nicho, creamos el contenido con IA y lanzamos en 14 días. +1,800 alumnos ya lo validan. ¿Te activo el acceso?
                           </p>
-                          <span className="text-[#00B94C]/60 text-[10px] mt-1 block">Respondido en 2s &middot; IA Activa</span>
+                          <span className="text-[#00B94C]/60 text-[10px] mt-1 block">Respondido en 2s · IA Activa</span>
                         </div>
                       </div>
                       {/* User purchase */}
@@ -470,7 +470,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-[#00B94C] text-xs font-semibold">
-                            &iexcl;S&iacute;! &iquest;C&oacute;mo me inscribo? 💰
+                            ¡Sí! ¿Cómo me inscribo? 💰
                           </p>
                         </div>
                       </div>
@@ -492,7 +492,7 @@ function StatsSection() {
   const stats = [
     { value: '$300B+', label: 'Mercado Global', color: 'text-[#FF6B35]', iconBg: 'bg-[#FF6B35]/10' },
     { value: '73%', label: 'Crecimiento Anual', color: 'text-[#00B94C]', iconBg: 'bg-[#00B94C]/10' },
-    { value: '0%', label: 'Log&iacute;stica Necesaria', color: 'text-[#F7C948]', iconBg: 'bg-[#F7C948]/10' },
+    { value: '0%', label: 'Logística Necesaria', color: 'text-[#F7C948]', iconBg: 'bg-[#F7C948]/10' },
     { value: '100%', label: 'Margen de Ganancia', color: 'text-[#9B59B6]', iconBg: 'bg-[#9B59B6]/10' },
   ]
 
@@ -500,17 +500,17 @@ function StatsSection() {
     {
       icon: <Clock className="w-6 h-6 text-[#FF6B35]" />,
       title: 'Vende Mientras Duermes',
-      desc: 'Tus infoproductos se venden 24/7 de forma autom&aacute;tica. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
+      desc: 'Tus infoproductos se venden 24/7 de forma automática. Sin importar la hora, la ubicación o si estás durmiendo.',
     },
     {
       icon: <Globe className="w-6 h-6 text-[#00B94C]" />,
       title: 'Opera Desde Cualquier Parte',
-      desc: '100% remoto. Solo necesitas internet. Vende a toda Latinoam&eacute;rica y cobra en d&oacute;lares desde cualquier lugar.',
+      desc: '100% remoto. Solo necesitas internet. Vende a toda Latinoamérica y cobra en dólares desde cualquier lugar.',
     },
     {
       icon: <DollarSign className="w-6 h-6 text-[#F7C948]" />,
-      title: 'Gana en D&oacute;lares Autom&aacute;ticamente',
-      desc: 'Hotmart te paga en USD y convierte autom&aacute;ticamente a tu moneda local. Facturaci&oacute;n recurrente sin esfuerzo.',
+      title: 'Gana en Dólares Automáticamente',
+      desc: 'Hotmart te paga en USD y convierte automáticamente a tu moneda local. Facturación recurrente sin esfuerzo.',
     },
   ]
 
@@ -534,8 +534,8 @@ function StatsSection() {
               EN TUS MANOS
             </h2>
             <p className="text-gray-500 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
-              La industria de productos digitales crece exponencialmente cada a&ntilde;o.
-              El mercado se movi&oacute; $300B+ en 2025 y t&uacute; puedes capturar tu parte.
+              La industria de productos digitales crece exponencialmente cada año.
+              El mercado se movió $300B+ en 2025 y tú puedes capturar tu parte.
             </p>
           </div>
 
@@ -591,7 +591,7 @@ function AutomatedSystemSection() {
               PILOTO <span className="text-gradient-hotmart">AUTOMÁTICO</span> EVERGREEN
             </h2>
             <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
-              Tu infoproducto trabaja 24/7. T&uacute; solo generas tr&aacute;fico. El sistema hace el resto.
+              Tu infoproducto trabaja 24/7. Tú solo generas tráfico. El sistema hace el resto.
             </p>
           </div>
 
@@ -602,7 +602,7 @@ function AutomatedSystemSection() {
               <GlassCard className="rounded-[32px] p-6 md:p-8 h-full flex flex-col">
                 <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
                   <Target className="w-5 h-5 text-[#00B94C]" />
-                  Embudo de Conversi&oacute;n
+                  Embudo de Conversión
                 </h3>
                 <div className="flex-1 flex flex-col items-center justify-center gap-2">
                   {/* Stage 1: Tráfico - widest */}
@@ -612,9 +612,9 @@ function AutomatedSystemSection() {
                         <span className="text-sm">📱</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Tr&aacute;fico Org&aacute;nico + Pago</span>
+                        <span className="text-white font-bold text-xs sm:text-sm">Tráfico Orgánico + Pago</span>
                       </div>
-                      <span className="text-purple-400 text-[10px] sm:text-xs font-bold shrink-0">META ADS &middot; TIKTOK</span>
+                      <span className="text-purple-400 text-[10px] sm:text-xs font-bold shrink-0">META ADS · TIKTOK</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -629,9 +629,9 @@ function AutomatedSystemSection() {
                         <span className="text-sm">🎯</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">P&aacute;gina de Ventas</span>
+                        <span className="text-white font-bold text-xs sm:text-sm">Página de Ventas</span>
                       </div>
-                      <span className="text-[#00B94C]/60 text-[10px] sm:text-xs font-bold shrink-0">DOPAM&Iacute;NICA</span>
+                      <span className="text-[#00B94C]/60 text-[10px] sm:text-xs font-bold shrink-0">DOPAMÍNICA</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -648,7 +648,7 @@ function AutomatedSystemSection() {
                       <div className="flex-1 min-w-0">
                         <span className="text-white font-bold text-xs sm:text-sm">Checkout Hotmart</span>
                       </div>
-                      <span className="text-[#00B94C]/50 text-[10px] sm:text-xs font-bold shrink-0">AUTOM&Aacute;TICO</span>
+                      <span className="text-[#00B94C]/50 text-[10px] sm:text-xs font-bold shrink-0">AUTOMÁTICO</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -663,9 +663,9 @@ function AutomatedSystemSection() {
                         <span className="text-sm">📦</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-white font-bold text-xs sm:text-sm">Entrega Autom&aacute;tica</span>
+                        <span className="text-white font-bold text-xs sm:text-sm">Entrega Automática</span>
                       </div>
-                      <span className="text-[#FFD700]/60 text-[10px] sm:text-xs font-bold shrink-0">INSTANT&Aacute;NEO</span>
+                      <span className="text-[#FFD700]/60 text-[10px] sm:text-xs font-bold shrink-0">INSTANTÁNEO</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -709,7 +709,7 @@ function AutomatedSystemSection() {
                     </div>
                     <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
                       <p className="text-gray-300 text-xs leading-relaxed">
-                        &iexcl;Bienvenido! Soy tu asistente. &iquest;Buscas crear tu primer infoproducto o escalar los que ya tienes?
+                        ¡Bienvenido! Soy tu asistente. ¿Buscas crear tu primer infoproducto o escalar los que ya tienes?
                       </p>
                     </div>
                   </div>
@@ -731,7 +731,7 @@ function AutomatedSystemSection() {
                     </div>
                     <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
                       <p className="text-gray-300 text-xs leading-relaxed">
-                        Perfecto. Nuestra mentor&iacute;a te lleva paso a paso: validaci&oacute;n, creaci&oacute;n, lanzamiento y tr&aacute;fico. &iquest;En qu&eacute; &aacute;rea eres experto?
+                        Perfecto. Nuestra mentoría te lleva paso a paso: validación, creación, lanzamiento y tráfico. ¿En qué área eres experto?
                       </p>
                     </div>
                   </div>
@@ -753,7 +753,7 @@ function AutomatedSystemSection() {
                     </div>
                     <div className="bg-[#00B94C]/5 border border-[#00B94C]/10 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[85%]">
                       <p className="text-gray-300 text-xs leading-relaxed">
-                        &iexcl;Excelente nicho! Los cursos de nutrici&oacute;n en Hotmart facturan en promedio $2,400/mes. Con nuestra mentor&iacute;a puedes lanzar en 14 d&iacute;as. &iquest;Te comparto el plan? 🚀
+                        ¡Excelente nicho! Los cursos de nutrición en Hotmart facturan en promedio $2,400/mes. Con nuestra mentoría puedes lanzar en 14 días. ¿Te comparto el plan? 🚀
                       </p>
                     </div>
                   </div>
@@ -788,15 +788,15 @@ function AutomatedSystemSection() {
 function PricingSection() {
   const features = [
     'Setup de ecosistema y branding',
-    'Selecci&oacute;n de productos ganadores',
-    'Dise&ntilde;o de buyer y avatares',
-    'Creaci&oacute;n de infoproductos desde cero',
+    'Selección de productos ganadores',
+    'Diseño de buyer y avatares',
+    'Creación de infoproductos desde cero',
     'Dominio de publicidad pagada',
-    'Viralizaci&oacute;n de contenido org&aacute;nico',
-    'Landing pages dopam&iacute;nicas',
-    'F&oacute;rmula de lanzamiento 2026',
+    'Viralización de contenido orgánico',
+    'Landing pages dopamínicas',
+    'Fórmula de lanzamiento 2026',
     '2 sesiones uno a uno personalizadas',
-    'Acompa&ntilde;amiento durante 30 d&iacute;as',
+    'Acompañamiento durante 30 días',
     'Grupo VIP de soporte exclusivo',
   ]
 
@@ -814,7 +814,7 @@ function PricingSection() {
         <SectionWrapper>
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4">
-              INVERSI&Oacute;N EN TU <span className="text-gradient-gold">LIBERTAD</span>
+              INVERSIÓN EN TU <span className="text-gradient-gold">LIBERTAD</span>
             </h2>
           </div>
 
@@ -833,12 +833,12 @@ function PricingSection() {
               <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 relative z-10">
                 <Star className="w-3 h-3.5 text-[#FF6B35]" />
                 <span className="text-[#FF6B35] text-[10px] sm:text-xs font-bold tracking-wider uppercase">
-                  Oferta Limitada &middot; Ultra VIP
+                  Oferta Limitada · Ultra VIP
                 </span>
               </div>
 
               <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-4 sm:mb-6 leading-snug relative z-10">
-                Mentor&iacute;a Avanzada: Creaci&oacute;n y Venta Masiva de Infoproductos en Hotmart
+                Mentoría Avanzada: Creación y Venta Masiva de Infoproductos en Hotmart
               </h3>
 
               {/* Price */}
@@ -848,7 +848,7 @@ function PricingSection() {
               <div className="text-4xl sm:text-5xl md:text-7xl font-black text-gradient-gold mb-2 relative z-10">
                 $350 USD
               </div>
-              <p className="text-gray-500 text-[10px] sm:text-xs mb-6 sm:mb-8 relative z-10">Pago &uacute;nico &middot; Acceso de por vida</p>
+              <p className="text-gray-500 text-[10px] sm:text-xs mb-6 sm:mb-8 relative z-10">Pago único · Acceso de por vida</p>
 
               {/* Features */}
               <div className="text-left max-w-sm mx-auto mb-6 sm:mb-8 space-y-2.5 sm:space-y-3 relative z-10">
@@ -1049,7 +1049,7 @@ function FinalCTASection() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-3 sm:mb-4 relative z-10 leading-tight">
-              &iquest;LISTO PARA{' '}
+              ¿LISTO PARA{' '}
               <span className="text-gradient-hotmart">FACTURAR</span>{' '}
               MIENTRAS DUERMES?
             </h2>
@@ -1063,10 +1063,10 @@ function FinalCTASection() {
               rel="noopener noreferrer"
               className="btn-dopamine rounded-full px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-base md:text-lg inline-flex items-center gap-2 sm:gap-3 mt-6 sm:mt-8 mb-4 relative z-10 whitespace-nowrap"
             >
-              ESCR&Iacute;BEME POR WHATSAPP AHORA <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              ESCRÍBEME POR WHATSAPP AHORA <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
             <p className="text-gray-600 text-xs relative z-10">
-              Inversi&oacute;n: $350 USD &middot; Garant&iacute;a de 30 d&iacute;as
+              Inversión: $350 USD · Garantía de 30 días
             </p>
           </div>
         </SectionWrapper>
@@ -1091,10 +1091,10 @@ function Footer() {
             </span>
           </div>
           <p className="text-gray-600 text-xs">
-            &copy; 2026 Hotmart Pro Mentor&iacute;a. Todos los derechos reservados.
+            © 2026 Hotmart Pro Mentoría. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-[#FF6B35]/60 hover:text-[#FF6B35] text-xs transition-colors">T&eacute;rminos</a>
+            <a href="#" className="text-[#FF6B35]/60 hover:text-[#FF6B35] text-xs transition-colors">Términos</a>
             <a href="#" className="text-[#00B94C]/60 hover:text-[#00B94C] text-xs transition-colors">Privacidad</a>
             <a href="https://wa.link/hanu3h" target="_blank" rel="noopener noreferrer" className="text-[#9B59B6]/60 hover:text-[#9B59B6] text-xs transition-colors">Contacto</a>
           </div>
