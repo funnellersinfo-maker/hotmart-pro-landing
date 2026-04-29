@@ -341,33 +341,33 @@ function MotorSection() {
       span: 'md:col-span-8',
       icon: <BookOpen className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
-      title: 'Tienda de Infoproductos Pro',
-      desc: 'Crea tu tienda de infoproductos integrada directamente con Hotmart. Tu ecosistema digital listo para facturar desde d&iacute;a uno.',
-      tags: ['HOTMART INTEGRADO', 'P&Aacute;GINA DE VENTAS'],
+      title: 'Validaci&oacute;n de Nicho Rentable',
+      desc: 'Identifica el nicho perfecto con mayor demanda y menor competencia en Hotmart. Te ense&ntilde;amos a validar tu idea antes de invertir un solo d&oacute;lar en creaci&oacute;n.',
+      tags: ['VALIDACI&Oacute;N', 'NICHO GANADOR'],
       tagColor: 'text-[#00B94C]',
     },
     {
       span: 'md:col-span-4',
       icon: <Library className="w-7 h-7 text-[#FFD700]" />,
       iconBg: 'bg-[#FFD700]/10',
-      title: 'Cat&aacute;logo Digital',
-      desc: 'Organiza y presenta tus productos digitales de forma profesional. Control total sobre tu cat&aacute;logo.',
+      title: 'Creaci&oacute;n de Infoproducto',
+      desc: 'Dise&ntilde;a tu curso, ebook o membres&iacute;a desde cero con estructura profesional. Sin necesidad de ser experto en edici&oacute;n ni dise&ntilde;o.',
       progress: true,
     },
     {
       span: 'md:col-span-4',
       icon: <Download className="w-7 h-7 text-pink-500" />,
       iconBg: 'bg-pink-500/10',
-      title: 'Entrega Autom&aacute;tica',
-      desc: 'Tus clientes reciben acceso instant&aacute;neo al contenido. Sin intervenci&oacute;n manual, 24/7.',
+      title: 'Lanzamiento Masivo',
+      desc: 'Domina el lanzamiento evergreen de tu infoproducto. Genera tr&aacute;fico pagado y org&aacute;nico que convierte en ventas 24/7.',
       badges: true,
     },
     {
       span: 'md:col-span-8',
       icon: <Zap className="w-7 h-7 text-[#00B94C]" />,
       iconBg: 'bg-[#00B94C]/10',
-      title: 'Cerebro de IA',
-      desc: 'Inteligencia artificial que cierra ventas por ti. Responde dudas, cualifica prospectos y convierte visitantes en compradores autom&aacute;ticamente.',
+      title: 'IA como Co-Creador',
+      desc: 'Usa inteligencia artificial para crear contenido, dise&ntilde;ar materiales y escalar tu infoproducto 10x m&aacute;s r&aacute;pido que el promedio.',
       chatMockup: true,
     },
   ]
@@ -381,7 +381,7 @@ function MotorSection() {
               EL MOTOR DE <span className="text-gradient-hotmart">HOTMART PRO</span>
             </h2>
             <p className="text-gray-500 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
-              Cinco pilares dise&ntilde;ados para crear, lanzar y escalar infoproductos de forma masiva.
+              Cuatro pilares dise&ntilde;ados para crear, lanzar y escalar infoproductos de forma masiva.
             </p>
           </div>
 
@@ -413,8 +413,8 @@ function MotorSection() {
                   {card.progress && (
                     <div className="mt-4 space-y-2">
                       <div className="flex justify-between text-xs">
-                        <span className="text-[#FFD700] font-bold">CONVERSION RATE</span>
-                        <span className="text-[#FFD700] font-bold">89%</span>
+                        <span className="text-[#FFD700] font-bold">ALUMNOS ACTIVOS</span>
+                        <span className="text-[#FFD700] font-bold">1,800+</span>
                       </div>
                       <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                         <div
@@ -432,7 +432,7 @@ function MotorSection() {
                         INSTANT&Aacute;NEO
                       </span>
                       <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">
-                        24/7
+                        EVERGREEN
                       </span>
                     </div>
                   )}
@@ -447,7 +447,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            Hola, quiero crear mi primer infoproducto. &iquest;La mentor&iacute;a tiene garant&iacute;a?
+                            Hola, quiero crear un infoproducto pero no s&eacute; por d&oacute;nde empezar.
                           </p>
                         </div>
                       </div>
@@ -458,7 +458,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-[#00B94C]/10 border border-[#00B94C]/20 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-gray-300 text-xs">
-                            &iexcl;Hola! &iexcl;S&iacute;! La mentor&iacute;a tiene 30 d&iacute;as de garant&iacute;a total. +1,800 alumnos ya lo validan. &iquest;Te activo el acceso ahora?
+                            &iexcl;Hola! Con nuestra mentor&iacute;a te llevamos paso a paso: validamos tu nicho, creamos el contenido con IA y lanzamos en 14 d&iacute;as. +1,800 alumnos ya lo validan. &iquest;Te activo el acceso?
                           </p>
                           <span className="text-[#00B94C]/60 text-[10px] mt-1 block">Respondido en 2s &middot; IA Activa</span>
                         </div>
@@ -470,7 +470,7 @@ function MotorSection() {
                         </div>
                         <div className="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-2.5">
                           <p className="text-[#00B94C] text-xs font-semibold">
-                            &iexcl;S&iacute;! &iquest;C&oacute;mo pago? 💰
+                            &iexcl;S&iacute;! &iquest;C&oacute;mo me inscribo? 💰
                           </p>
                         </div>
                       </div>
@@ -500,7 +500,7 @@ function StatsSection() {
     {
       icon: <Clock className="w-6 h-6 text-[#FF6B35]" />,
       title: 'Vende Mientras Duermes',
-      desc: 'Tus infoproductos se venden 24/7 en piloto autom&aacute;tico. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
+      desc: 'Tus infoproductos se venden 24/7 de forma autom&aacute;tica. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
     },
     {
       icon: <Globe className="w-6 h-6 text-[#00B94C]" />,
