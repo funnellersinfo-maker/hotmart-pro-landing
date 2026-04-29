@@ -142,12 +142,12 @@ function Navigation() {
   ]
 
   return (
-    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 ${scrolled ? 'top-2' : 'top-4'}`}>
-      <div className="liquid-glass-strong rounded-full px-4 md:px-8 py-3 flex items-center gap-4 md:gap-8 max-w-4xl">
+    <nav className={`fixed top-4 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'top-2' : 'top-4'}`}>
+      <div className="liquid-glass-strong rounded-full px-3 md:px-8 py-2.5 md:py-3 flex items-center gap-3 md:gap-8 max-w-4xl mx-auto">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 shrink-0">
-          <img src="/hotmart-logo.png" alt="Hotmart" className="w-7 h-7 object-contain hotmart-logo-img" />
-          <span className="text-white font-bold text-sm tracking-tight">
+        <a href="#" className="flex items-center gap-1.5 shrink-0">
+          <img src="/hotmart-logo.png" alt="Hotmart" className="w-6 h-6 md:w-7 md:h-7 object-contain hotmart-logo-img" />
+          <span className="text-white font-bold text-xs md:text-sm tracking-tight">
             HOTMART<span className="text-[#FF6B35]"> PRO</span>
           </span>
         </a>
@@ -170,14 +170,14 @@ function Navigation() {
           href="https://wa.link/hanu3h"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:block btn-dopamine rounded-full px-5 py-2 text-xs font-bold shrink-0"
+          className="hidden md:block btn-dopamine rounded-full px-5 py-2 text-xs font-bold shrink-0 whitespace-nowrap"
         >
           EMPEZAR AHORA
         </a>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white ml-auto"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -187,7 +187,7 @@ function Navigation() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden absolute top-full mt-2 left-0 right-0 liquid-glass-strong rounded-2xl p-4 flex flex-col gap-3 min-w-[240px]">
+        <div className="md:hidden absolute top-full mt-2 left-3 right-3 mx-auto liquid-glass-strong rounded-2xl p-4 flex flex-col gap-3 max-w-[280px] w-auto">
           {links.map((link) => (
             <a
               key={link.label}
@@ -202,7 +202,7 @@ function Navigation() {
             href="https://wa.link/hanu3h"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-dopamine rounded-full px-5 py-2.5 text-xs font-bold text-center mt-1"
+            className="btn-dopamine rounded-full px-5 py-2.5 text-xs font-bold text-center mt-1 whitespace-nowrap"
           >
             EMPEZAR AHORA
           </a>
@@ -216,7 +216,7 @@ function Navigation() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-24 pb-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-3 sm:px-4 pt-20 sm:pt-24 pb-16 sm:pb-24">
       {/* ===== CINEMATIC FULL-SCREEN BACKGROUND ===== */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Hotmart logo image covering full screen with Ken Burns animation */}
@@ -266,15 +266,15 @@ function HeroSection() {
         </div>
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-4 py-2 mb-8">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 liquid-glass rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-5 sm:mb-8">
           <PulseDot />
-          <span className="text-gray-400 text-xs font-semibold tracking-widest uppercase">
+          <span className="text-gray-400 text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
             EST. 2026 &middot; MENTOR&Iacute;A ACTIVA
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-6 text-white">
+        <h1 className="text-[2rem] sm:text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-4 sm:mb-6 text-white">
           TU ECOSISTEMA DE
           <br />
           INFOPRODUCTOS EN
@@ -283,7 +283,7 @@ function HeroSection() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-gray-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-1">
           Transforma tu conocimiento en ingresos autom&aacute;ticos. Sin inventario. Sin log&iacute;stica.
           Solo escalabilidad digital con inteligencia artificial.
         </p>
@@ -294,7 +294,7 @@ function HeroSection() {
             href="https://wa.link/hanu3h"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-dopamine rounded-full px-8 py-4 text-sm md:text-base inline-flex items-center gap-2"
+            className="btn-dopamine rounded-full px-6 sm:px-8 py-3.5 sm:py-4 text-xs sm:text-sm md:text-base inline-flex items-center gap-2 whitespace-nowrap"
           >
             ADQUIRIR ACCESO VIP <ArrowRight className="w-4 h-4" />
           </a>
@@ -312,7 +312,7 @@ function HeroSection() {
               />
             ))}
           </div>
-          <span className="text-gray-500 text-sm">+1,800 creadores activos</span>
+          <span className="text-gray-500 text-xs sm:text-sm">+1,800 creadores activos</span>
         </div>
       </div>
 
@@ -320,11 +320,11 @@ function HeroSection() {
       <div className="absolute bottom-10 left-0 right-0 h-[2px] hotmart-gradient-bar z-10" />
 
       {/* Marquee strip */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/5 py-3 z-10">
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/5 py-2.5 sm:py-3 z-10">
         <div className="animate-marquee whitespace-nowrap flex">
           {Array.from({ length: 12 }).map((_, i) => (
-            <span key={i} className="text-gray-600 text-xs font-bold tracking-[0.3em] mx-8">
-              {['HOTMART', 'MONETIZZE', 'KIWIFY', 'EDUZZ', 'PERFECT PAY', 'DIGITAL'][i % 6]}
+            <span key={i} className="text-gray-600 text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] mx-5 sm:mx-8">
+              {['NUTRICIÓN', 'FINANZAS', 'MARKETING DIGITAL', 'FITNESS', 'DESARROLLO PERSONAL', 'PROGRAMACIÓN', 'COACHING', 'INVERSIONES', 'DISEÑO', 'FOTOGRAFÍA', 'IDIOMAS', 'E-COMMERCE'][i % 12]}
             </span>
           ))}
         </div>
@@ -373,27 +373,27 @@ function MotorSection() {
   ]
 
   return (
-    <section id="ecosistema" className="py-24 px-4">
+    <section id="ecosistema" className="py-16 sm:py-24 px-3 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4">
               EL MOTOR DE <span className="text-gradient-hotmart">HOTMART PRO</span>
             </h2>
-            <p className="text-gray-500 text-sm md:text-base max-w-xl mx-auto">
+            <p className="text-gray-500 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
               Cinco pilares dise&ntilde;ados para crear, lanzar y escalar infoproductos de forma masiva.
             </p>
           </div>
 
-          <div id="motor" className="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div id="motor" className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4">
             {cards.map((card, i) => (
               <div key={i} className={`scroll-reveal ${card.span}`}>
-                <GlassCard className="rounded-[32px] p-6 md:p-8 h-full">
-                  <div className={`inline-flex p-3 rounded-2xl ${card.iconBg} mb-4`}>
+                <GlassCard className="rounded-[24px] sm:rounded-[32px] p-5 sm:p-6 md:p-8 h-full">
+                  <div className={`inline-flex p-2.5 sm:p-3 rounded-xl sm:rounded-2xl ${card.iconBg} mb-3 sm:mb-4`}>
                     {card.icon}
                   </div>
-                  <h3 className="text-white font-bold text-lg md:text-xl mb-2">{card.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{card.desc}</p>
+                  <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-1.5 sm:mb-2">{card.title}</h3>
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">{card.desc}</p>
 
                   {/* Tags */}
                   {card.tags && (
@@ -515,50 +515,50 @@ function StatsSection() {
   ]
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-16 sm:py-24 px-3 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
           {/* Hotmart Color Palette gradient bar */}
-          <div className="h-1 hotmart-gradient-bar mb-16" />
+          <div className="h-1 hotmart-gradient-bar mb-10 sm:mb-16" />
 
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-3 liquid-glass rounded-full px-4 py-2 mb-6">
               <img src="/hotmart-logo.png" alt="Hotmart" className="w-4 h-4 object-contain" />
               <span className="text-gray-400 text-xs font-semibold tracking-widest uppercase">
                 Hecho para Creadores
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-3 sm:mb-4 leading-tight">
               EL PODER DEL MERCADO DE{' '}
               <span className="text-gradient-hotmart">INFOPRODUCTOS</span>{' '}
               EN TUS MANOS
             </h2>
-            <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
+            <p className="text-gray-500 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
               La industria de productos digitales crece exponencialmente cada a&ntilde;o.
               El mercado se movi&oacute; $300B+ en 2025 y t&uacute; puedes capturar tu parte.
             </p>
           </div>
 
           {/* Stat cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-16">
             {stats.map((stat, i) => (
               <div key={i} className="scroll-reveal">
-                <GlassCard className="rounded-[28px] p-6 text-center cursor-default">
-                  <div className={`inline-flex p-2.5 rounded-xl ${stat.iconBg} mb-3`}>
+                <GlassCard className="rounded-[20px] sm:rounded-[28px] p-4 sm:p-6 text-center cursor-default">
+                  <div className={`inline-flex p-2 sm:p-2.5 rounded-lg sm:rounded-xl ${stat.iconBg} mb-2 sm:mb-3`}>
                     <TrendingUp className="w-5 h-5" style={{ color: 'inherit' }} />
                   </div>
-                  <div className={`text-3xl md:text-4xl font-black ${stat.color} mb-1`}>{stat.value}</div>
-                  <div className="text-gray-500 text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
+                  <div className={`text-2xl sm:text-3xl md:text-4xl font-black ${stat.color} mb-0.5 sm:mb-1`}>{stat.value}</div>
+                  <div className="text-gray-500 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
                 </GlassCard>
               </div>
             ))}
           </div>
 
           {/* Feature cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             {features.map((f, i) => (
               <div key={i} className="scroll-reveal">
-                <GlassCard className="rounded-[28px] p-6 h-full">
+                <GlassCard className="rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 h-full">
                   <div className="mb-4">{f.icon}</div>
                   <h3 className="text-white font-bold text-lg mb-2">{f.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
@@ -583,11 +583,11 @@ function AutomatedSystemSection() {
   ]
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-16 sm:py-24 px-3 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-3 sm:mb-4">
               PILOTO <span className="text-gradient-hotmart">AUTOMÁTICO</span> EVERGREEN
             </h2>
             <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
@@ -596,7 +596,7 @@ function AutomatedSystemSection() {
           </div>
 
           {/* Two column layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {/* Funnel diagram */}
             <div className="scroll-reveal">
               <GlassCard className="rounded-[32px] p-6 md:p-8 h-full">
@@ -740,7 +740,7 @@ function PricingSection() {
   ]
 
   return (
-    <section id="oferta" className="py-24 px-4 relative">
+    <section id="oferta" className="py-16 sm:py-24 px-3 sm:px-4 relative">
       {/* Hotmart Color Palette top bar */}
       <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
       {/* Subtle background with palette colors */}
@@ -751,15 +751,15 @@ function PricingSection() {
 
       <div className="max-w-3xl mx-auto relative z-10">
         <SectionWrapper>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4">
               INVERSI&Oacute;N EN TU <span className="text-gradient-gold">LIBERTAD</span>
             </h2>
           </div>
 
           {/* Pricing card */}
           <div className="scroll-reveal">
-            <GlassCard className="rounded-[40px] p-8 md:p-12 text-center relative overflow-hidden hotmart-glow-orange">
+            <GlassCard className="rounded-[28px] sm:rounded-[40px] p-6 sm:p-8 md:p-12 text-center relative overflow-hidden hotmart-glow-orange">
               {/* Hotmart logo in pricing card */}
               <div className="absolute top-6 right-6 opacity-10">
                 <img src="/hotmart-logo.png" alt="" className="w-24 h-24 object-contain" />
@@ -769,40 +769,40 @@ function PricingSection() {
               <div className="absolute inset-0 animate-shimmer pointer-events-none" />
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-full px-4 py-2 mb-6 relative z-10">
-                <Star className="w-3.5 h-3.5 text-[#FF6B35]" />
-                <span className="text-[#FF6B35] text-xs font-bold tracking-wider uppercase">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 relative z-10">
+                <Star className="w-3 h-3.5 text-[#FF6B35]" />
+                <span className="text-[#FF6B35] text-[10px] sm:text-xs font-bold tracking-wider uppercase">
                   Oferta Limitada &middot; Ultra VIP
                 </span>
               </div>
 
-              <h3 className="text-white font-bold text-lg md:text-xl mb-6 leading-snug relative z-10">
+              <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-4 sm:mb-6 leading-snug relative z-10">
                 Mentor&iacute;a Avanzada: Creaci&oacute;n y Venta Masiva de Infoproductos en Hotmart
               </h3>
 
               {/* Price */}
               <div className="mb-2 relative z-10">
-                <span className="text-gray-600 line-through text-lg">$700 USD</span>
+                <span className="text-gray-600 line-through text-base sm:text-lg">$700 USD</span>
               </div>
-              <div className="text-5xl md:text-7xl font-black text-gradient-gold mb-2 relative z-10">
+              <div className="text-4xl sm:text-5xl md:text-7xl font-black text-gradient-gold mb-2 relative z-10">
                 $350 USD
               </div>
-              <p className="text-gray-500 text-xs mb-8 relative z-10">Pago &uacute;nico &middot; Acceso de por vida</p>
+              <p className="text-gray-500 text-[10px] sm:text-xs mb-6 sm:mb-8 relative z-10">Pago &uacute;nico &middot; Acceso de por vida</p>
 
               {/* Features */}
-              <div className="text-left max-w-sm mx-auto mb-8 space-y-3 relative z-10">
+              <div className="text-left max-w-sm mx-auto mb-6 sm:mb-8 space-y-2.5 sm:space-y-3 relative z-10">
                 {features.map((f, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-4.5 h-4.5 text-[#00B94C] shrink-0 mt-0.5" />
-                    <span className="text-gray-300 text-sm">{f}</span>
+                    <CheckCircle className="w-4 h-4 text-[#00B94C] shrink-0 mt-0.5" />
+                    <span className="text-gray-300 text-xs sm:text-sm">{f}</span>
                   </div>
                 ))}
               </div>
 
               {/* Urgency banner */}
-              <div className="bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-2xl px-5 py-3 mb-6 relative z-10">
-                <p className="text-[#FF6B35] text-sm font-bold flex items-center justify-center gap-2">
-                  <Clock className="w-4 h-4" />
+              <div className="bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-2.5 sm:py-3 mb-5 sm:mb-6 relative z-10">
+                <p className="text-[#FF6B35] text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 sm:gap-2">
+                  <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   Cerramos accesos el jueves 30 de abril
                 </p>
               </div>
@@ -812,11 +812,11 @@ function PricingSection() {
                 href="https://wa.link/hanu3h"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-dopamine rounded-full px-10 py-4 text-sm md:text-base inline-flex items-center gap-2 relative z-10"
+                className="btn-dopamine rounded-full px-6 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm md:text-base inline-flex items-center gap-2 relative z-10 whitespace-nowrap"
               >
                 ASEGURAR MI CUPO VIP <ArrowRight className="w-4 h-4" />
               </a>
-              <p className="text-gray-600 text-xs mt-3 relative z-10">Cupos ultra-limitados</p>
+              <p className="text-gray-600 text-[10px] sm:text-xs mt-2.5 sm:mt-3 relative z-10">Cupos ultra-limitados</p>
             </GlassCard>
           </div>
         </SectionWrapper>
@@ -850,24 +850,24 @@ function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-24 px-4 relative">
+    <section className="py-16 sm:py-24 px-3 sm:px-4 relative">
       {/* Hotmart Color Palette top bar */}
       <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <div className="mb-4">
               <img src="/hotmart-logo.png" alt="Hotmart" className="w-12 mx-auto object-contain opacity-30" />
             </div>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4">
               RESULTADOS <span className="text-gradient-hotmart">REALES</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             {testimonials.map((t, i) => (
               <div key={i} className="scroll-reveal">
-                <GlassCard className="rounded-[28px] p-6 h-full">
+                <GlassCard className="rounded-[20px] sm:rounded-[28px] p-5 sm:p-6 h-full">
                   {/* Quote icon */}
                   <Quote className="w-6 h-6 text-[#00B94C]/30 mb-4" />
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">{t.text}</p>
@@ -925,13 +925,13 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-24 px-4 relative">
+    <section id="faq" className="py-16 sm:py-24 px-3 sm:px-4 relative">
       {/* Hotmart Color Palette top bar */}
       <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
       <div className="max-w-3xl mx-auto">
         <SectionWrapper>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4">
               DUDAS <span className="text-gradient-hotmart">FRECUENTES</span>
             </h2>
           </div>
@@ -943,11 +943,11 @@ function FAQSection() {
                 <div key={i} className="scroll-reveal">
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full text-left liquid-glass rounded-2xl p-5 transition-all duration-300 hover:border-white/15 focus:outline-none"
+                    className="w-full text-left liquid-glass rounded-xl sm:rounded-2xl p-4 sm:p-5 transition-all duration-300 hover:border-white/15 focus:outline-none"
                     aria-expanded={isOpen}
                   >
-                    <div className="flex items-center justify-between gap-4">
-                      <span className="text-white font-semibold text-sm md:text-base">{faq.q}</span>
+                    <div className="flex items-center justify-between gap-3 sm:gap-4">
+                      <span className="text-white font-semibold text-xs sm:text-sm md:text-base">{faq.q}</span>
                       <ChevronDown
                         className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                       />
@@ -972,7 +972,7 @@ function FAQSection() {
 
 function FinalCTASection() {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-16 sm:py-24 px-3 sm:px-4 relative overflow-hidden">
       {/* Hotmart palette background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#FF6B35]/3 via-black to-black pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar pointer-events-none" />
@@ -987,7 +987,7 @@ function FinalCTASection() {
               <img src="/hotmart-logo.png" alt="Hotmart" className="w-16 mx-auto object-contain hotmart-logo-img opacity-80" />
             </div>
 
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-4 relative z-10 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-3 sm:mb-4 relative z-10 leading-tight">
               &iquest;LISTA PARA{' '}
               <span className="text-gradient-hotmart">FACTURAR</span>{' '}
               MIENTRAS DUERMES?
@@ -1000,9 +1000,9 @@ function FinalCTASection() {
               href="https://wa.link/hanu3h"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-dopamine rounded-full px-10 py-5 text-base md:text-lg inline-flex items-center gap-3 mt-8 mb-4 relative z-10"
+              className="btn-dopamine rounded-full px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-base md:text-lg inline-flex items-center gap-2 sm:gap-3 mt-6 sm:mt-8 mb-4 relative z-10 whitespace-nowrap"
             >
-              ESCR&Iacute;BEME POR WHATSAPP AHORA <ArrowRight className="w-5 h-5" />
+              ESCR&Iacute;BEME POR WHATSAPP AHORA <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
             <p className="text-gray-600 text-xs relative z-10">
               Inversi&oacute;n: $350 USD &middot; Garant&iacute;a de 30 d&iacute;as
