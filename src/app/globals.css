@@ -140,6 +140,27 @@
   100% { background-position: 200% 0; }
 }
 
+@keyframes kenBurns {
+  0% { transform: scale(1.0) translate(0%, 0%); }
+  25% { transform: scale(1.08) translate(-1%, 1%); }
+  50% { transform: scale(1.12) translate(1%, -0.5%); }
+  75% { transform: scale(1.06) translate(-0.5%, 0.5%); }
+  100% { transform: scale(1.0) translate(0%, 0%); }
+}
+
+@keyframes kenBurnsMobile {
+  0% { transform: scale(1.15) translate(0%, 0%); }
+  25% { transform: scale(1.22) translate(-1%, 1%); }
+  50% { transform: scale(1.28) translate(1%, -0.5%); }
+  75% { transform: scale(1.20) translate(-0.5%, 0.5%); }
+  100% { transform: scale(1.15) translate(0%, 0%); }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(0, 185, 76, 0.3); }
+  50% { border-color: rgba(0, 185, 76, 0.6); }
+}
+
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
@@ -173,6 +194,20 @@
   background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+}
+
+.animate-kenburns {
+  animation: kenBurns 25s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-kenburns {
+    animation: kenBurnsMobile 20s ease-in-out infinite;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
 }
 
 /* ===== Glass Effects ===== */
@@ -210,6 +245,29 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ===== Hotmart Color Palette Accents ===== */
+.hotmart-gradient-bar {
+  background: linear-gradient(90deg, #FF6B35, #F7C948, #00B94C, #1B1464, #9B59B6, #FF6B35);
+  background-size: 200% 100%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.hotmart-gradient-bar-vertical {
+  background: linear-gradient(180deg, #FF6B35, #F7C948, #00B94C, #1B1464);
+}
+
+.hotmart-glow-orange {
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.15), 0 0 80px rgba(255, 107, 53, 0.05);
+}
+
+.hotmart-glow-green {
+  box-shadow: 0 0 40px rgba(0, 185, 76, 0.15), 0 0 80px rgba(0, 185, 76, 0.05);
+}
+
+.hotmart-glow-purple {
+  box-shadow: 0 0 40px rgba(27, 20, 100, 0.2), 0 0 80px rgba(27, 20, 100, 0.08);
 }
 
 /* ===== Buttons ===== */
@@ -270,8 +328,19 @@ html {
 
 /* ===== Selection ===== */
 ::selection {
-  background: rgba(0, 185, 76, 0.3);
+  background: rgba(255, 107, 53, 0.3);
   color: white;
+}
+
+/* ===== Hotmart Logo Image Utility ===== */
+.hotmart-logo-img {
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.hotmart-logo-img:hover {
+  filter: drop-shadow(0 0 16px rgba(255, 107, 53, 0.5));
 }
 
 /* ===== Section transition for scroll reveal ===== */

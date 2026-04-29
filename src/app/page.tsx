@@ -91,25 +91,29 @@ function LoadingScreen({ show, fadeOut }: { show: boolean; fadeOut: boolean }) {
     <div
       className={`fixed inset-0 z-50 bg-black flex flex-col items-center justify-center transition-opacity duration-500 ${fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
     >
-      {/* Spinning ring + icon */}
+      {/* Hotmart Color palette animated bar top */}
+      <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
+
+      {/* Spinning ring + Hotmart logo */}
       <div className="relative mb-8">
-        <div className="w-20 h-20 rounded-full border-2 border-transparent border-t-[#00B94C] border-r-[#1B1464] animate-spin-slow" />
+        <div className="w-24 h-24 rounded-full border-2 border-transparent border-t-[#FF6B35] border-r-[#00B94C] animate-spin-slow" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <GraduationCap className="w-8 h-8 text-[#00B94C]" />
+          <img src="/hotmart-logo.png" alt="Hotmart" className="w-14 h-14 object-contain hotmart-logo-img" />
         </div>
       </div>
 
       {/* Brand name */}
       <h2 className="text-white text-2xl font-black tracking-tighter mb-2">
-        HOTMART <span className="text-[#00B94C]">PRO</span>
+        HOTMART <span className="text-[#FF6B35]">PRO</span>
       </h2>
       <p className="text-gray-500 text-sm tracking-wide">Preparando tu ecosistema...</p>
 
-      {/* Loading bar */}
+      {/* Loading bar with full palette */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/5 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-[#1B1464] via-[#00B94C] to-[#2DCE89]"
+          className="h-full hotmart-gradient-bar"
           style={{
+            width: '40%',
             animation: 'loadingBar 2s ease-in-out infinite',
           }}
         />
@@ -142,9 +146,9 @@ function Navigation() {
       <div className="liquid-glass-strong rounded-full px-4 md:px-8 py-3 flex items-center gap-4 md:gap-8 max-w-4xl">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 shrink-0">
-          <GraduationCap className="w-5 h-5 text-[#00B94C]" />
+          <img src="/hotmart-logo.png" alt="Hotmart" className="w-7 h-7 object-contain hotmart-logo-img" />
           <span className="text-white font-bold text-sm tracking-tight">
-            HOTMART<span className="text-[#00B94C]"> PRO</span>
+            HOTMART<span className="text-[#FF6B35]"> PRO</span>
           </span>
         </a>
 
@@ -209,37 +213,54 @@ function Navigation() {
 function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-24 pb-16">
-      {/* Background radial gradients */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00B94C]/10 rounded-full blur-[128px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#1B1464]/15 rounded-full blur-[128px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00B94C]/5 rounded-full blur-[180px]" />
+      {/* ===== CINEMATIC FULL-SCREEN BACKGROUND ===== */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Hotmart logo image covering full screen with Ken Burns animation */}
+        <div className="absolute inset-0 animate-kenburns">
+          <img
+            src="/hotmart-logo.png"
+            alt=""
+            className="w-full h-full object-cover"
+            style={{ minHeight: '100vh', minWidth: '100vw' }}
+          />
+        </div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/70" />
+        {/* Color overlay from palette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1B1464]/30 via-transparent to-black/90" />
+        {/* Additional gradient from sides */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/10 via-transparent to-[#00B94C]/10" />
       </div>
 
       {/* Floating decorative elements (desktop) */}
-      <div className="hidden lg:block absolute top-32 left-16 animate-float">
+      <div className="hidden lg:block absolute top-32 left-16 animate-float z-10">
         <div className="liquid-glass rounded-full p-4">
-          <TrendingUp className="w-8 h-8 text-[#00B94C]" />
+          <TrendingUp className="w-8 h-8 text-[#FF6B35]" />
         </div>
       </div>
-      <div className="hidden lg:block absolute top-48 right-24 animate-float-delayed">
+      <div className="hidden lg:block absolute top-48 right-24 animate-float-delayed z-10">
         <div className="liquid-glass rounded-full p-4">
-          <Zap className="w-8 h-8 text-[#FFD700]" />
+          <Zap className="w-8 h-8 text-[#F7C948]" />
         </div>
       </div>
-      <div className="hidden lg:block absolute bottom-40 left-28 animate-float">
+      <div className="hidden lg:block absolute bottom-40 left-28 animate-float z-10">
         <div className="liquid-glass rounded-full p-4">
-          <Rocket className="w-8 h-8 text-[#FF6B35]" />
+          <Rocket className="w-8 h-8 text-[#00B94C]" />
         </div>
       </div>
-      <div className="hidden lg:block absolute bottom-32 right-20 animate-float-delayed">
+      <div className="hidden lg:block absolute bottom-32 right-20 animate-float-delayed z-10">
         <div className="liquid-glass rounded-full p-3">
-          <Sparkles className="w-6 h-6 text-purple-400" />
+          <Sparkles className="w-6 h-6 text-[#9B59B6]" />
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center">
+        {/* Hotmart Logo centered above headline */}
+        <div className="mb-6">
+          <img src="/hotmart-logo.png" alt="Hotmart" className="w-20 md:w-28 mx-auto object-contain hotmart-logo-img opacity-90" />
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-4 py-2 mb-8">
           <PulseDot />
@@ -289,8 +310,11 @@ function HeroSection() {
         </div>
       </div>
 
+      {/* Hotmart Color Palette Bar above marquee */}
+      <div className="absolute bottom-10 left-0 right-0 h-[2px] hotmart-gradient-bar z-10" />
+
       {/* Marquee strip */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/5 py-3">
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/5 py-3 z-10">
         <div className="animate-marquee whitespace-nowrap flex">
           {Array.from({ length: 12 }).map((_, i) => (
             <span key={i} className="text-gray-600 text-xs font-bold tracking-[0.3em] mx-8">
@@ -460,25 +484,25 @@ function MotorSection() {
 
 function StatsSection() {
   const stats = [
-    { value: '$300B+', label: 'Mercado Global', color: 'text-[#00B94C]', iconBg: 'bg-[#00B94C]/10' },
-    { value: '73%', label: 'Crecimiento Anual', color: 'text-purple-400', iconBg: 'bg-purple-500/10' },
-    { value: '0h', label: 'Logística Requerida', color: 'text-[#FF6B35]', iconBg: 'bg-[#FF6B35]/10' },
-    { value: '100%', label: 'Margen de Ganancia', color: 'text-cyan-400', iconBg: 'bg-cyan-500/10' },
+    { value: '$300B+', label: 'Mercado Global', color: 'text-[#FF6B35]', iconBg: 'bg-[#FF6B35]/10' },
+    { value: '73%', label: 'Crecimiento Anual', color: 'text-[#00B94C]', iconBg: 'bg-[#00B94C]/10' },
+    { value: '0h', label: 'Logística Requerida', color: 'text-[#F7C948]', iconBg: 'bg-[#F7C948]/10' },
+    { value: '100%', label: 'Margen de Ganancia', color: 'text-[#9B59B6]', iconBg: 'bg-[#9B59B6]/10' },
   ]
 
   const features = [
     {
-      icon: <Clock className="w-6 h-6 text-[#00B94C]" />,
+      icon: <Clock className="w-6 h-6 text-[#FF6B35]" />,
       title: 'Vende Mientras Duermes',
       desc: 'Tus productos se venden 24/7 en piloto autom&aacute;tico. Sin importar la hora, la ubicaci&oacute;n o si est&aacute;s durmiendo.',
     },
     {
-      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      icon: <Globe className="w-6 h-6 text-[#00B94C]" />,
       title: 'Opera Desde Cualquier Parte',
       desc: '100% remoto. Solo necesitas internet. Vende a toda Latinoam&eacute;rica y cobra en d&oacute;lares desde cualquier lugar.',
     },
     {
-      icon: <DollarSign className="w-6 h-6 text-[#FFD700]" />,
+      icon: <DollarSign className="w-6 h-6 text-[#F7C948]" />,
       title: 'Gana en D&oacute;lares Autom&aacute;ticamente',
       desc: 'Hotmart te paga en USD y convierte autom&aacute;ticamente a tu moneda local. Facturaci&oacute;n recurrente sin esfuerzo.',
     },
@@ -488,12 +512,12 @@ function StatsSection() {
     <section className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
-          {/* Green gradient top border */}
-          <div className="h-1 rounded-full bg-gradient-to-r from-[#00B94C] via-[#2DCE89] to-[#1B1464] mb-16" />
+          {/* Hotmart Color Palette gradient bar */}
+          <div className="h-1 hotmart-gradient-bar mb-16" />
 
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-4 py-2 mb-6">
-              <Shield className="w-3.5 h-3.5 text-[#00B94C]" />
+            <div className="inline-flex items-center gap-3 liquid-glass rounded-full px-4 py-2 mb-6">
+              <img src="/hotmart-logo.png" alt="Hotmart" className="w-4 h-4 object-contain" />
               <span className="text-gray-400 text-xs font-semibold tracking-widest uppercase">
                 Hecho para Creadores
               </span>
@@ -711,9 +735,12 @@ function PricingSection() {
 
   return (
     <section id="oferta" className="py-24 px-4 relative">
-      {/* Subtle background */}
+      {/* Hotmart Color Palette top bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
+      {/* Subtle background with palette colors */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00B94C]/5 rounded-full blur-[200px]" />
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[200px]" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#00B94C]/5 rounded-full blur-[200px]" />
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10">
@@ -726,14 +753,19 @@ function PricingSection() {
 
           {/* Pricing card */}
           <div className="scroll-reveal">
-            <GlassCard className="rounded-[40px] p-8 md:p-12 text-center relative overflow-hidden">
+            <GlassCard className="rounded-[40px] p-8 md:p-12 text-center relative overflow-hidden hotmart-glow-orange">
+              {/* Hotmart logo in pricing card */}
+              <div className="absolute top-6 right-6 opacity-10">
+                <img src="/hotmart-logo.png" alt="" className="w-24 h-24 object-contain" />
+              </div>
+
               {/* Shimmer effect */}
               <div className="absolute inset-0 animate-shimmer pointer-events-none" />
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-full px-4 py-2 mb-6 relative z-10">
-                <Star className="w-3.5 h-3.5 text-[#FFD700]" />
-                <span className="text-[#FFD700] text-xs font-bold tracking-wider uppercase">
+              <div className="inline-flex items-center gap-2 bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-full px-4 py-2 mb-6 relative z-10">
+                <Star className="w-3.5 h-3.5 text-[#FF6B35]" />
+                <span className="text-[#FF6B35] text-xs font-bold tracking-wider uppercase">
                   Oferta Limitada &middot; Ultra VIP
                 </span>
               </div>
@@ -810,10 +842,15 @@ function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 px-4 relative">
+      {/* Hotmart Color Palette top bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
       <div className="max-w-6xl mx-auto">
         <SectionWrapper>
           <div className="text-center mb-16">
+            <div className="mb-4">
+              <img src="/hotmart-logo.png" alt="Hotmart" className="w-12 mx-auto object-contain opacity-30" />
+            </div>
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4">
               RESULTADOS <span className="text-gradient-hotmart">REALES</span>
             </h2>
@@ -880,7 +917,9 @@ function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-24 px-4">
+    <section id="faq" className="py-24 px-4 relative">
+      {/* Hotmart Color Palette top bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar" />
       <div className="max-w-3xl mx-auto">
         <SectionWrapper>
           <div className="text-center mb-16">
@@ -926,14 +965,19 @@ function FAQSection() {
 function FinalCTASection() {
   return (
     <section className="py-24 px-4 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00B94C]/5 via-black to-black pointer-events-none" />
+      {/* Hotmart palette background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FF6B35]/3 via-black to-black pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-1 hotmart-gradient-bar pointer-events-none" />
+      {/* Multi-color glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF6B35]/8 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         <SectionWrapper>
           <div className="text-center">
-            {/* Green glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#00B94C]/10 rounded-full blur-[120px] pointer-events-none" />
+            {/* Hotmart logo */}
+            <div className="mb-6 relative z-10">
+              <img src="/hotmart-logo.png" alt="Hotmart" className="w-16 mx-auto object-contain hotmart-logo-img opacity-80" />
+            </div>
 
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-4 relative z-10 leading-tight">
               &iquest;LISTA PARA{' '}
@@ -964,21 +1008,25 @@ function FinalCTASection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <GraduationCap className="w-4 h-4 text-[#00B94C]" />
-          <span className="text-white font-bold text-sm">
-            HOTMART<span className="text-[#00B94C]"> PRO</span>
-          </span>
-        </div>
-        <p className="text-gray-600 text-xs">
-          &copy; 2026 Hotmart Pro Mentoría. Todos los derechos reservados.
-        </p>
-        <div className="flex gap-6">
-          <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Términos</a>
-          <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Privacidad</a>
-          <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Contacto</a>
+    <footer className="relative">
+      {/* Hotmart Color Palette bar */}
+      <div className="h-1 hotmart-gradient-bar" />
+      <div className="border-t border-white/5 py-8 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <img src="/hotmart-logo.png" alt="Hotmart" className="w-5 h-5 object-contain" />
+            <span className="text-white font-bold text-sm">
+              HOTMART<span className="text-[#FF6B35]"> PRO</span>
+            </span>
+          </div>
+          <p className="text-gray-600 text-xs">
+            &copy; 2026 Hotmart Pro Mentor&iacute;a. Todos los derechos reservados.
+          </p>
+          <div className="flex gap-6">
+            <a href="#" className="text-[#FF6B35]/60 hover:text-[#FF6B35] text-xs transition-colors">T&eacute;rminos</a>
+            <a href="#" className="text-[#00B94C]/60 hover:text-[#00B94C] text-xs transition-colors">Privacidad</a>
+            <a href="#" className="text-[#9B59B6]/60 hover:text-[#9B59B6] text-xs transition-colors">Contacto</a>
+          </div>
         </div>
       </div>
     </footer>
