@@ -26,3 +26,22 @@ Stage Summary:
 - Color palette (orange #FF6B35, gold #F7C948, green #00B94C, navy #1B1464, purple #9B59B6) applied in repeated areas
 - Animated gradient bars in 7 sections as visual dividers
 - ESLint: zero errors, dev server: 200 OK
+---
+Task ID: 1
+Agent: Main Agent
+Task: Corregir superposición de textos del embudo de conversión en versión móvil
+
+Work Log:
+- Analicé el screenshot del usuario (576x1280, mobile) con VLM para identificar exactamente qué textos se superponían
+- El VLM confirmó que los tags (INSTANTÁNEO, META ADS · TIKTOK, etc.) se superponían con los títulos en las barras del embudo
+- Identifiqué que `hidden xs:inline` no es un breakpoint válido en Tailwind (no configurado), por lo que algunos tags nunca se mostraban
+- Modifiqué las 5 etapas del embudo: cambié el layout interno de `flex-row` a `flex-col sm:flex-row`
+- En móvil: título en línea 1, tag en línea 2 (ligeramente transparente)
+- En desktop: título y tag en una sola línea horizontal
+- Etapas corregidas: Tráfico Orgánico + Pago, Página de Ventas, Checkout Hotmart, Entrega Automática, GANANCIAS
+- Build exitoso sin errores
+
+Stage Summary:
+- Todos los textos del embudo ahora se muestran en dos líneas en móvil (título arriba, tag abajo)
+- En desktop mantienen el layout horizontal original
+- No más superposición de textos

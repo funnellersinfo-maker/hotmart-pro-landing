@@ -611,10 +611,10 @@ function AutomatedSystemSection() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">📱</span>
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
                         <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Tráfico Orgánico + Pago</span>
+                        <span className="text-purple-400/70 text-[9px] sm:text-purple-400 sm:text-[10px] font-bold shrink-0">META ADS · TIKTOK</span>
                       </div>
-                      <span className="text-purple-400 text-[9px] sm:text-xs font-bold shrink-0 hidden xs:inline">META ADS · TIKTOK</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -628,10 +628,10 @@ function AutomatedSystemSection() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">🎯</span>
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
                         <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Página de Ventas</span>
+                        <span className="text-[#00B94C]/60 text-[9px] sm:text-[#00B94C]/70 sm:text-[10px] font-bold shrink-0">DOPAMÍNICA</span>
                       </div>
-                      <span className="text-[#00B94C]/60 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">DOPAMÍNICA</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -645,10 +645,10 @@ function AutomatedSystemSection() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/15 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">💳</span>
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
                         <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Checkout Hotmart</span>
+                        <span className="text-[#00B94C]/50 text-[9px] sm:text-[#00B94C]/60 sm:text-[10px] font-bold shrink-0">AUTOMÁTICO</span>
                       </div>
-                      <span className="text-[#00B94C]/50 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">AUTOMÁTICO</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -662,10 +662,10 @@ function AutomatedSystemSection() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">📦</span>
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
                         <span className="text-white font-bold text-[11px] sm:text-sm leading-tight">Entrega Automática</span>
+                        <span className="text-[#FFD700]/60 text-[9px] sm:text-[#FFD700]/70 sm:text-[10px] font-bold shrink-0">INSTANTÁNEO</span>
                       </div>
-                      <span className="text-[#FFD700]/60 text-[9px] sm:text-xs font-bold shrink-0 hidden sm:inline">INSTANTÁNEO</span>
                     </div>
                   </div>
                   {/* Arrow */}
@@ -679,10 +679,10 @@ function AutomatedSystemSection() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">💰</span>
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
                         <span className="text-[#00B94C] font-bold text-[11px] sm:text-sm leading-tight">GANANCIAS</span>
+                        <span className="text-[#00B94C]/80 text-[9px] sm:text-[#00B94C] sm:text-[10px] font-bold shrink-0">$$$</span>
                       </div>
-                      <span className="text-[#00B94C] text-[9px] sm:text-xs font-bold shrink-0">$$$</span>
                     </div>
                   </div>
                 </div>
