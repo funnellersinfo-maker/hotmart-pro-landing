@@ -736,27 +736,58 @@ function InteractiveChat() {
     '¿Tiene garantía?',
   ]
 
-  async function sendMessage(text: string) {
+  function getLocalReply(msg: string): string {
+    const m = msg.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+
+    if (m.includes('precio') || m.includes('cuanto cuesta') || m.includes('costo') || m.includes('valor') || m.includes('plan') || m.includes('incluye') || m.includes('que incluye'))
+      return 'El plan de mentoría tiene un precio promocional de $190 USD (antes $350 y $700). Pago único, acceso de por vida. Incluye 11 beneficios: setup de branding, selección de nicho, creación de infoproducto, publicidad pagada, contenido orgánico, landing pages, fórmula de lanzamiento 2026, 2 sesiones 1a1, 30 días de acompañamiento y Grupo VIP. ¡Es el 73% de descuento! Escríbeme por WhatsApp para asegurar tu cupo: https://wa.link/hanu3h'
+
+    if (m.includes('experiencia') || m.includes('necesito saber') || m.includes('soy principiante') || m.includes('desde cero') || m.includes('sin experiencia'))
+      return '¡No necesitas experiencia previa! La mentoría está diseñada para guiarte desde cero. Te llevamos paso a paso: validamos tu nicho, creamos tu infoproducto con IA, y lo lanzamos en Hotmart. Solo necesitas dedicar 2-3 horas diarias durante 14 días de creación. Más de 1,800 alumnos empezaron sin experiencia. ¿Listo para comenzar? https://wa.link/hanu3h'
+
+    if (m.includes('como funciona') || m.includes('mentoria') || m.includes('proceso') || m.includes('como es'))
+      return 'La mentoría funciona en 4 fases: 1) Validamos tu nicho rentable en Hotmart. 2) Creamos tu infoproducto (curso, ebook o membresía) con estructura profesional. 3) Lanzamos con tráfico pagado y orgánico evergreen. 4) Escalas con IA y automatización. Todo con acompañamiento directo durante 30 días + 2 sesiones personalizadas 1a1. ¡Escríbeme por WhatsApp y te explico los detalles! https://wa.link/hanu3h'
+
+    if (m.includes('garantia') || m.includes('devolucion') || m.includes('reembolso') || m.includes('riesgo'))
+      return 'Sí, tienes 30 días de garantía total. Si no estás satisfecho con la mentoría, te devolvemos el 100% de tu inversión sin preguntas. No hay riesgo para ti. Además, el plan de $190 USD es un pago único con acceso de por vida. ¿Quieres asegurar tu cupo con garantía? https://wa.link/hanu3h'
+
+    if (m.includes('hotmart') || m.includes('plataforma'))
+      return 'Hotmart es la plataforma #1 de infoproductos en Latinoamérica con más de 20 millones de usuarios en +50 países. Ofrece el mejor sistema de afiliados del mercado, procesamiento en múltiples monedas y pagos automáticos. Nosotros te enseñamos a dominar Hotmart desde cero y crear un ecosistema de ingresos automáticos. ¡Conviértete en creador exitoso! https://wa.link/hanu3h'
+
+    if (m.includes('infoproducto') || m.includes('producto') || m.includes('curso') || m.includes('ebook') || m.includes('crear'))
+      return 'Puedes crear cualquier tipo de infoproducto: cursos en video, ebooks, mentorías, membresías, templates, PDFs y más. Te enseñamos a elegir el formato ideal según tu nicho y a diseñarlo con estructura profesional usando IA. El mercado de infoproductos mueve más de $300B+ al año con un margen del 100%. ¡Tu conocimiento vale oro! https://wa.link/hanu3h'
+
+    if (m.includes('tiempo') || m.includes('cuanto tiempo') || m.includes('dedicar') || m.includes('horas'))
+      return 'Necesitas 2-3 horas diarias durante los primeros 14 días de creación. Después del lanzamiento, solo 30 minutos al día para gestionar tu ecosistema automatizado. El sistema evergreen trabaja 24/7 por ti, generando ventas mientras duermes. ¡Es el modelo de negocio más escalable! https://wa.link/hanu3h'
+
+    if (m.includes('inscribir') || m.includes('como me uno') || m.includes('registro') || m.includes('comprar') || m.includes('pagar') || m.includes('quiero'))
+      return '¡Excelente! Para inscribirte solo haz clic en el link de WhatsApp, te explico los pasos y procesamos tu pago de $190 USD de forma segura: https://wa.link/hanu3h. Recibirás acceso inmediato a toda la mentoría, el Grupo VIP y tus 2 sesiones personalizadas. ¡Te espero!'
+
+    if (m.includes('hola') || m.includes('buenas') || m.includes('hey') || m.includes('saludos'))
+      return '¡Hola! 👋 Soy tu asistente de Hotmart Pro. Estoy aquí para resolver todas tus dudas sobre la mentoría de infoproductos. ¿Qué te gustaría saber? Puedes preguntarme sobre el plan, beneficios, garantía, o cómo funciona.'
+
+    if (m.includes('whatsapp') || m.includes('contacto') || m.includes('escribir') || m.includes('hablar'))
+      return '¡Por supuesto! Puedes escribirme directamente por WhatsApp aquí: https://wa.link/hanu3h. Te respondo al instante y podemos resolver todas tus dudas en vivo.'
+
+    if (m.includes('gracias') || m.includes('genial') || m.includes('perfecto'))
+      return '¡Con gusto! Si tienes alguna otra duda, estoy aquí para ayudarte. Y recuerda, la promo de $190 USD es solo por hoy. ¡No te la pierdas! https://wa.link/hanu3h'
+
+    return 'Gracias por tu pregunta. Para darte una respuesta más personalizada, te recomiendo escribir directamente por WhatsApp: https://wa.link/hanu3h. Allí el mentor puede resolver tu duda en vivo. También puedes preguntarme sobre: el plan de $190, garantía, cómo funciona la mentoría, o qué tipo de infoproducto puedes crear.'
+  }
+
+  function sendMessage(text: string) {
     if (!text.trim() || loading) return
     const userMsg = text.trim()
     setInput('')
     setMessages(prev => [...prev, { role: 'user', content: userMsg }])
     setLoading(true)
 
-    try {
-      const res = await fetch('/api', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMsg }),
-      })
-      const data = await res.json()
-      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }])
-    } catch {
-      setMessages(prev => [...prev, { role: 'assistant', content: 'Error de conexión. Escríbeme por WhatsApp: https://wa.link/hanu3h 📱' }])
-    } finally {
+    setTimeout(() => {
+      const reply = getLocalReply(userMsg)
+      setMessages(prev => [...prev, { role: 'assistant', content: reply }])
       setLoading(false)
       inputRef.current?.focus()
-    }
+    }, 800 + Math.random() * 700)
   }
 
   return (

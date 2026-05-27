@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,24 +21,38 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Hotmart Pro - Mentoría de Infoproductos en Hotmart | $190 USD Promo",
+  description:
+    "Aprende a crear y vender infoproductos en Hotmart con nuestra mentoría premium. De cero a tu primer infoproducto en 14 días. Incluye 11 beneficios, soporte VIP y garantía de 30 días.",
+  keywords: [
+    "Hotmart",
+    "infoproductos",
+    "mentoría Hotmart",
+    "curso Hotmart",
+    "vender infoproductos",
+    "crear infoproducto",
+    "ingresos pasivos",
+    "marketing digital",
+    "Hotmart Pro",
+  ],
+  authors: [{ name: "Hotmart Pro" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/hotmart-logo.png",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Hotmart Pro - Mentoría de Infoproductos | $190 USD Promo",
+    description:
+      "Transforma tu conocimiento en ingresos automáticos. Mentoría premium de creación y venta masiva de infoproductos en Hotmart. +1,800 alumnos activos.",
+    url: "https://hotmart.pages.dev",
+    siteName: "Hotmart Pro",
     type: "website",
+    locale: "es_LA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Hotmart Pro - Mentoría de Infoproductos | $190 USD Promo",
+    description:
+      "Transforma tu conocimiento en ingresos automáticos. Mentoría premium de creación y venta masiva de infoproductos en Hotmart.",
   },
 };
 
@@ -49,12 +62,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         {children}
-        <Toaster />
       </body>
     </html>
   );
