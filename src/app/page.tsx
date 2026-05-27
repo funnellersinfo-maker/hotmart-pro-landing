@@ -658,7 +658,7 @@ function AutomatedSystemSection() {
                   </div>
                   {/* Stage 4: Delivery */}
                   <div className="w-full sm:w-[60%]">
-                    <div className="bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full transition-all duration-500 hover:bg-[#FFD700]/20">
+                    <div className="bg-[#FFD700]/10 border border-[#FFD700]/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-start gap-2 sm:gap-3 sm:items-center w-full transition-all duration-500 hover:bg-[#FFD700]/20">
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FFD700]/15 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">📦</span>
                       </div>
@@ -675,7 +675,7 @@ function AutomatedSystemSection() {
                   </div>
                   {/* Stage 5: Ganancias - narrowest, highlighted */}
                   <div className="w-full sm:w-[48%]">
-                    <div className="bg-gradient-to-r from-[#00B94C]/20 to-[#2DCE89]/20 border border-[#00B94C]/30 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3 w-full animate-pulse-border transition-all duration-500 hover:from-[#00B94C]/30 hover:to-[#2DCE89]/30">
+                    <div className="bg-gradient-to-r from-[#00B94C]/20 to-[#2DCE89]/20 border border-[#00B94C]/30 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 flex items-start gap-2 sm:gap-3 sm:items-center w-full animate-pulse-border transition-all duration-500 hover:from-[#00B94C]/30 hover:to-[#2DCE89]/30">
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00B94C]/20 flex items-center justify-center shrink-0">
                         <span className="text-xs sm:text-sm">💰</span>
                       </div>
