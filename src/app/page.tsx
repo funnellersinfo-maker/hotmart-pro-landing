@@ -730,7 +730,7 @@ function InteractiveChat() {
   }, [messages])
 
   const suggestedResponses = [
-    '¿Qué incluye el plan de $350?',
+    '¿Qué incluye el plan?',
     '¿Necesito experiencia previa?',
     '¿Cómo funciona la mentoría?',
     '¿Tiene garantía?',
@@ -858,6 +858,81 @@ function InteractiveChat() {
   )
 }
 
+/* ========== COUNTDOWN TIMER ========== */
+
+function CountdownTimer() {
+  const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 })
+  const [expired, setExpired] = useState(false)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  useEffect(() => {
+    function calcTime() {
+      const now = new Date()
+      const target = new Date(now)
+      target.setHours(23, 59, 59, 999)
+      const diff = target.getTime() - now.getTime()
+
+      if (diff <= 0) {
+        if (intervalRef.current) clearInterval(intervalRef.current)
+        setExpired(true)
+        window.location.href = 'https://wa.link/hanu3h'
+        return
+      }
+
+      const totalSeconds = Math.floor(diff / 1000)
+      const h = Math.floor(totalSeconds / 3600)
+      const m = Math.floor((totalSeconds % 3600) / 60)
+      const s = totalSeconds % 60
+      setTimeLeft({ hours: h, minutes: m, seconds: s })
+    }
+
+    calcTime()
+    intervalRef.current = setInterval(calcTime, 1000)
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
+  }, [])
+
+  if (expired) {
+    return (
+      <div className="bg-red-500/20 border border-red-500/40 rounded-xl px-4 py-3 mb-4 relative z-10 animate-pulse">
+        <p className="text-red-400 text-sm font-black text-center">PROMO EXPIRADA - REDIRIGIENDO...</p>
+      </div>
+    )
+  }
+
+  const pad = (n: number) => String(n).padStart(2, '0')
+
+  return (
+    <div className="bg-black/40 border border-white/10 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 mb-6 sm:mb-8 relative z-10">
+      <p className="text-gray-500 text-[10px] sm:text-xs font-bold text-center mb-2 uppercase tracking-widest">
+        La promo termina en:
+      </p>
+      <div className="flex items-center justify-center gap-2 sm:gap-3">
+        {[
+          { value: timeLeft.hours, label: 'HRS' },
+          { value: timeLeft.minutes, label: 'MIN' },
+          { value: timeLeft.seconds, label: 'SEG' },
+        ].map((unit, i) => (
+          <div key={i} className="flex items-center gap-2 sm:gap-3">
+            <div className="flex flex-col items-center">
+              <div className="bg-[#FF6B35]/20 border border-[#FF6B35]/30 rounded-lg px-2.5 sm:px-3.5 py-1.5 sm:py-2">
+                <span className="text-white font-black text-xl sm:text-3xl md:text-4xl tabular-nums leading-none">
+                  {pad(unit.value)}
+                </span>
+              </div>
+              <span className="text-gray-600 text-[8px] sm:text-[10px] font-bold mt-1 uppercase tracking-wider">{unit.label}</span>
+            </div>
+            {i < 2 && (
+              <span className="text-[#FF6B35] font-black text-xl sm:text-2xl mb-4 animate-pulse">:</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 /* ========== PRICING SECTION ========== */
 
 function PricingSection() {
@@ -916,14 +991,24 @@ function PricingSection() {
                 Mentoría Avanzada: Creación y Venta Masiva de Infoproductos en Hotmart
               </h3>
 
+              {/* Promo badge */}
+              <div className="relative z-10 mb-2">
+                <span className="inline-block bg-red-500/20 border border-red-500/40 text-red-400 text-[10px] sm:text-xs font-black px-3 py-1 rounded-full animate-pulse tracking-wider uppercase">
+                  PRECIO PROMO - SOLO HOY
+                </span>
+              </div>
               {/* Price */}
-              <div className="mb-2 relative z-10">
-                <span className="text-gray-600 line-through text-base sm:text-lg">$700 USD</span>
+              <div className="mb-1 relative z-10">
+                <span className="text-gray-500 line-through text-sm sm:text-base">$700 USD</span>
+                <span className="text-gray-500 line-through text-sm sm:text-base mx-2">$350 USD</span>
               </div>
-              <div className="text-4xl sm:text-5xl md:text-7xl font-black text-gradient-gold mb-2 relative z-10">
-                $350 USD
+              <div className="text-5xl sm:text-6xl md:text-8xl font-black text-gradient-gold mb-2 relative z-10">
+                $190 USD
               </div>
-              <p className="text-gray-500 text-[10px] sm:text-xs mb-6 sm:mb-8 relative z-10">Pago único · Acceso de por vida</p>
+              <p className="text-gray-500 text-[10px] sm:text-xs mb-4 sm:mb-6 relative z-10">Pago único · Acceso de por vida · 73% de descuento</p>
+
+              {/* Countdown Timer */}
+              <CountdownTimer />
 
               {/* Features */}
               <div className="text-left max-w-sm mx-auto mb-6 sm:mb-8 space-y-2.5 sm:space-y-3 relative z-10">
@@ -936,10 +1021,10 @@ function PricingSection() {
               </div>
 
               {/* Urgency banner */}
-              <div className="bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-2.5 sm:py-3 mb-5 sm:mb-6 relative z-10">
-                <p className="text-[#FF6B35] text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 sm:gap-2">
+              <div className="bg-red-500/10 border border-red-500/20 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-2.5 sm:py-3 mb-5 sm:mb-6 relative z-10">
+                <p className="text-red-400 text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 sm:gap-2">
                   <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  Cerramos accesos el jueves 30 de abril
+                  La promo termina a las 11:59 PM de hoy
                 </p>
               </div>
 
@@ -1141,7 +1226,7 @@ function FinalCTASection() {
               ESCRÍBEME POR WHATSAPP AHORA <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
             <p className="text-gray-600 text-xs relative z-10">
-              Inversión: $350 USD · Garantía de 30 días
+              Inversión: $190 USD · Garantía de 30 días
             </p>
           </div>
         </SectionWrapper>
